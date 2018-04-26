@@ -1,0 +1,68 @@
+climate.home_house_thermostat:
+  hidden: true
+binary_sensor.house_thermostat_fan:
+  hidden: true
+binary_sensor.house_thermostat_has_leaf:
+  hidden: true
+binary_sensor.house_thermostat_is_locked:
+  hidden: true
+binary_sensor.house_thermostat_is_using_emergency_heat:
+  hidden: true
+binary_sensor.house_thermostat_online:
+  hidden: true
+sensor.house_thermostat_operation_mode:
+  hidden: true
+sensor.dark_sky_cloud_coverage:
+  friendly_name: Outside Clouds
+sensor.dark_sky_humidity:
+  friendly_name: Outside Humidity
+sensor.dark_sky_precip_probability:
+  friendly_name: Outside Precip
+sensor.dark_sky_temperature:
+  friendly_name: Outside Temp
+sensor.dark_sky_wind_speed:
+  friendly_name: Outside Wind
+sensor.house_thermostat_humidity:
+  hidden: true
+sensor.house_thermostat_temperature:
+  friendly_name: Inside Temp
+sensor.house_thermostat_target:
+  friendly_name: Inside Target
+sensor.dark_sky_summary:
+  friendly_name: Outside Summary
+binary_sensor.hub_hub:
+  hidden: true
+sensor.house_thermostat_hvac_state:
+  friendly_name: Inside HVAC
+sensor.main_mtu1_power:
+  friendly_name: Energy Consumption
+sensor.main_mtu1_voltage:
+  friendly_name: Energy Voltage
+binary_sensor.bottom_tapt_button:
+  hidden: true
+binary_sensor.top_tapt_button:
+  hidden: true
+binary_sensor.tapt_smart_switch:
+  hidden: true
+binary_sensor.den_relay:
+  hidden: true
+binary_sensor.den_relays_top_button:
+  hidden: true
+binary_sensor.den_relays_bottom_button:
+  hidden: true
+binary_sensor.philips_hue:
+  hidden: true
+binary_sensor.hub:
+  hidden: true
+binary_sensor.gang:
+  hidden: true
+sensor.den_relay_proximity:
+  hidden: true
+switch.outside_front:
+  hidden: true
+light.fr_1:
+  hidden: true
+light.fr_2:
+  hidden: true
+switch.outside_lights:
+  hidden: true

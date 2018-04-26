@@ -1,0 +1,83 @@
+homeassistant:
+  name: Home
+  latitude: 39.4734804
+  longitude: -74.5073636
+  elevation: 15
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include customize.yaml
+
+frontend:
+config:
+conversation:
+history:
+logbook:
+ffmpeg:
+map:
+sun:
+
+http:
+  api_password: !secret http_password
+
+updater:
+  include_used_components: true
+
+discovery:
+
+wink:
+
+panel_iframe:
+  router:
+    title: Energy
+    url: https://solar.thegrebs.com/
+    icon: mdi:power-plug
+
+
+nest:
+  client_id:     !secret nest_client_id
+  client_secret: !secret nest_client_secret
+
+climate:
+  - platform: nest
+    username: michael@thegrebs.com
+    password: !secret nest_password
+
+sensor:
+  - platform: ted5000
+    name: main
+    host: 192.168.86.50
+    port: 80
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    monitored_conditions:
+      - summary
+      - precip_probability
+      - temperature
+      - wind_speed
+      - cloud_cover
+      - humidity
+
+ring:
+  username: michael@thegrebs.com
+  password: !secret ring_password
+
+camera:
+  - platform: ring
+
+tts:
+  - platform: google
+
+cloud:
+  alexa:
+    filter:
+      exclude_domains:
+        - switch
+        - light
+    entity_config:
+      script.fix_hall_light:
+        name: Fix Hall Light
+        display_categories: SWITCH
+
+group:      !include groups.yaml
+automation: !include automations.yaml
+script:     !include scripts.yaml

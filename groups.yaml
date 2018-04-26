@@ -1,0 +1,18 @@
+kitchen:
+  name: Kitchen
+  icon: mdi:fridge
+  view: yes
+  entities:
+    - switch.on_air
+    - light.kitchen
+    - light.kitchen_table
+den:
+  name: Den
+  icon: mdi:television
+  view: yes
+  entities:
+    - light.den
+    - switch.den_fan
+    - sensor.den_relay_humidity
+    - sensor.den_relay_temperature
+    - media_player.family_room_speaker

@@ -1,0 +1,14 @@
+fix_hall_light:
+  sequence:
+    # This is written using the Script Syntax
+    - service: light.turn_on
+      data:
+        entity_id: light.downstairs_hall
+    - delay: '00:00:02'
+    - service: light.turn_off
+      data:
+        entity_id: light.downstairs_hall
+    - service: tts.google_say
+      data:
+        entity_id: media_player.family_room_speaker
+        message: I fixed it real good.
