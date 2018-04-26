@@ -78,6 +78,9 @@ cloud:
         name: Fix Hall Light
         display_categories: SWITCH
 
+juicenet:
+  access_token: !secret juicenet_api_key
+
 group:      !include groups.yaml
 automation: !include automations.yaml
 script:     !include scripts.yaml

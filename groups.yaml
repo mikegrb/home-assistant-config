@@ -16,3 +16,18 @@ den:
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
     - media_player.family_room_speaker
+juicenet:
+  name: JuiceNet EVSE
+  entities:
+    - sensor.juicenet_device_amps
+    - sensor.juicenet_device_charge_time
+    - sensor.juicenet_device_charging_status
+    - sensor.juicenet_device_energy_added
+    - sensor.juicenet_device_temperature
+    - sensor.juicenet_device_voltage
+    - sensor.juicenet_device_watts
+ted:
+  name: Energy Consumption
+  entities:
+    - sensor.main_mtu1_power
+    - sensor.main_mtu1_voltage
