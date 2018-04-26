@@ -1,7 +1,7 @@
 homeassistant:
   name: Home
-  latitude: 39.4734804
-  longitude: -74.5073636
+  latitude:  39.473055912019305
+  longitude: -74.50922252018545
   elevation: 15
   unit_system: imperial
   time_zone: America/New_York
@@ -15,9 +15,13 @@ logbook:
 ffmpeg:
 map:
 sun:
+ios:
 
 http:
-  api_password: !secret http_password
+  api_password:    !secret http_password
+  ssl_certificate: /config/fullchain.pem
+  ssl_key:         /config/privkey.pem
+  base_url:        home.thegrebs.com
 
 updater:
   include_used_components: true
