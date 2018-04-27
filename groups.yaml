@@ -31,3 +31,8 @@ ted:
   entities:
     - sensor.main_mtu1_power
     - sensor.main_mtu1_voltage
+people:
+  name: Family
+  entities:
+    - device_tracker.michaels_iphone
+    - device_tracker.heidi_grebs_iphone
