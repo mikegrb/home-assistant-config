@@ -1,1 +1,21 @@
-[]
+- alias: Plug-In Car Reminder
+  trigger:
+    platform: time
+    at: '18:30:00'
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.juicenet_device_charging_status
+        state: standyby
+      - condition: state
+        entity_id: device_tracker.michaels_iphone
+        state: home
+      - condition: state
+        entity_id: device_tracker.heidi_grebs_iphone
+        state: home
+  action:
+    - service: tts.google_say
+      data:
+        entity_id: media_player.family_room_speaker
+        message: The car is not plugged in.
