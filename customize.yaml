@@ -70,3 +70,25 @@ device_tracker.michaels_iphone:
   friendly_name: Mike
 device_tracker.heidi_grebs_iphone:
   friendly_name: Heidi
+
+# duplicates via hue
+light.den_2:
+  hidden: true
+light.den_3:
+  hidden: true
+light.office_2:
+  hidden: true
+light.office_3:
+  hidden: true
+light.fr_1:
+  hidden: true
+light.fr_1_2:
+  hidden: true
+light.fr_2:
+  hidden: true
+light.fr_2_2:
+  hidden: true
+light.front_room_2:
+  hidden: true
+light.entertainment_area_1:
+  hidden: true
