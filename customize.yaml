@@ -60,10 +60,6 @@ sensor.den_relay_proximity:
   hidden: true
 switch.outside_front:
   hidden: true
-light.fr_1:
-  hidden: true
-light.fr_2:
-  hidden: true
 switch.outside_lights:
   hidden: true
 device_tracker.michaels_iphone:
