@@ -66,3 +66,7 @@ light.fr_2:
   hidden: true
 switch.outside_lights:
   hidden: true
+device_tracker.michaels_iphone:
+  friendly_name: Mike
+device_tracker.heidi_grebs_iphone:
+  friendly_name: Heidi

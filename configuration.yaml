@@ -85,6 +85,14 @@ cloud:
 juicenet:
   access_token: !secret juicenet_api_key
 
+zone:
+  - name: School
+    latitude: 39.487062
+    longitude: -74.515413
+    radius: 300
+    icon: mdi:school
+
+
 group:      !include groups.yaml
 automation: !include automations.yaml
 script:     !include scripts.yaml
