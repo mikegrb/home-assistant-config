@@ -92,6 +92,31 @@ zone:
     radius: 300
     icon: mdi:school
 
+homekit:
+  auto_start: False
+  filter:
+    exclude_domains:
+      - remote
+      - sensor
+    exclude_entities:
+      - light.den_2
+      - light.den_3
+      - light.office_2
+      - light.office_3
+      - light.fr_1
+      - light.fr_1_2
+      - light.fr_2
+      - light.fr_2_2
+      - light.front_room_2
+      - light.entertainment_area_1
+      - sensor.dark_sky_precip_probability
+      - light.inside_lights
+      - switch.outside_front
+      - switch.outside_lights
+      - light.outside
+      - light.downstairs
+      - light.outside
+      - light.upstairs
 
 group:      !include groups.yaml
 automation: !include automations.yaml
