@@ -1,43 +1,63 @@
 climate.home_house_thermostat:
   hidden: true
-binary_sensor.house_thermostat_fan:
-  hidden: true
-binary_sensor.house_thermostat_has_leaf:
-  hidden: true
-binary_sensor.house_thermostat_is_locked:
-  hidden: true
 binary_sensor.house_thermostat_is_using_emergency_heat:
   hidden: true
 binary_sensor.house_thermostat_online:
   hidden: true
-sensor.house_thermostat_operation_mode:
+binary_sensor.house_thermostat_is_locked:
   hidden: true
-sensor.dark_sky_cloud_coverage:
-  friendly_name: Outside Clouds
-sensor.dark_sky_humidity:
-  friendly_name: Outside Humidity
-sensor.dark_sky_precip_probability:
-  friendly_name: Outside Precip
-sensor.dark_sky_temperature:
-  friendly_name: Outside Temp
-sensor.dark_sky_wind_speed:
-  friendly_name: Outside Wind
-sensor.house_thermostat_humidity:
+sensor.house_thermostat_target:
   hidden: true
 sensor.house_thermostat_temperature:
-  friendly_name: Inside Temp
-sensor.house_thermostat_target:
-  friendly_name: Inside Target
-sensor.dark_sky_summary:
-  friendly_name: Outside Summary
-binary_sensor.hub_hub:
   hidden: true
 sensor.house_thermostat_hvac_state:
-  friendly_name: Inside HVAC
+  hidden: true
+sensor.house_thermostat_operation_mode:
+  hidden: true
+sensor.heidi_grebs_iphone_battery_level:
+  hidden: true
+sensor.heidi_grebs_iphone_battery_state:
+  hidden: true
+sensor.michaels_iphone_battery_level:
+  hidden: true
+sensor.michaels_iphone_battery_state:
+  hidden: true
+sensor.den_relay_humidity:
+  friendly_name: Den Humidity
+sensor.den_relay_temperature:
+  friendly_name: Den Temperature
+binary_sensor.house_thermostat_fan:
+  friendly_name: House Fan
+sensor.house_thermostat_humidity:
+  friendly_name: House Humidity
+binary_sensor.house_thermostat_has_leaf:
+  friendly_name: House has Leaf
+binary_sensor.den_relay_presence:
+  hidden: true
+binary_sensor.driveway_motion:
+  hidden: true
+binary_sensor.front_door_motion:
+  hidden: true
+binary_sensor.front_door_button_pressed:
+  hidden: true
+sensor.dark_sky_cloud_coverage:
+  friendly_name: Clouds
+sensor.dark_sky_humidity:
+  friendly_name: Humidity
+sensor.dark_sky_precip_probability:
+  friendly_name: Precip
+sensor.dark_sky_temperature:
+  friendly_name: Temp
+sensor.dark_sky_wind_speed:
+  friendly_name: Wind
+sensor.dark_sky_summary:
+  friendly_name: Summary
+binary_sensor.hub_hub:
+  hidden: true
 sensor.main_mtu1_power:
-  friendly_name: Energy Consumption
+  friendly_name: Consumption
 sensor.main_mtu1_voltage:
-  friendly_name: Energy Voltage
+  friendly_name: Voltage
 binary_sensor.bottom_tapt_button:
   hidden: true
 binary_sensor.top_tapt_button:

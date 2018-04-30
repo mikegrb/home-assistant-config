@@ -1,3 +1,13 @@
+climate:
+  name: Climate
+  entities:
+    - climate.house
+    - sensor.house_thermostat_humidity
+    - binary_sensor.house_thermostat_has_leaf
+    - binary_sensor.house_thermostat_fan
+    - sensor.den_relay_humidity
+    - sensor.den_relay_temperature
+
 kitchen:
   name: Kitchen
   icon: mdi:fridge
@@ -27,7 +37,7 @@ juicenet:
     - sensor.juicenet_device_voltage
     - sensor.juicenet_device_watts
 ted:
-  name: Energy Consumption
+  name: Energy
   entities:
     - sensor.main_mtu1_power
     - sensor.main_mtu1_voltage
@@ -36,3 +46,13 @@ people:
   entities:
     - device_tracker.michaels_iphone
     - device_tracker.heidi_grebs_iphone
+weather:
+  name: Weather
+  entities:
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_summary
+
