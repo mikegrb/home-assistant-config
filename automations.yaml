@@ -7,7 +7,7 @@
     conditions:
       - condition: state
         entity_id: sensor.juicenet_device_charging_status
-        state: standyby
+        state: standby
       - condition: state
         entity_id: device_tracker.michaels_iphone
         state: home
