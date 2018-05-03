@@ -91,6 +91,19 @@ zone:
     longitude: -74.515413
     radius: 300
     icon: mdi:school
+  - name: ShopRite
+    latitude: 39.462512
+    longitude: -74.495474
+    icon: mdi:cart
+  - name: BJs
+    latitude: 39.4512411
+    longitude: -74.6286195
+    icon: mdi:cart
+  - name: Simkins
+    latitude: 39.487560
+    longitude: -74.462958
+    radius: 70
+    icon: mdi:karate
 
 homekit:
   auto_start: False
