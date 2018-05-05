@@ -8,10 +8,25 @@ climate:
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
 
+
+######################
+#                    #
+# Rooms              #
+#                    #
+######################
+
+rooms:
+  name: Rooms
+  icon: mdi:floor-plan
+  view: yes
+  entities:
+    - group.kitchen
+    - group.den
+    - group.front_room
+
 kitchen:
   name: Kitchen
   icon: mdi:fridge
-  view: yes
   entities:
     - switch.on_air
     - light.kitchen
@@ -19,13 +34,47 @@ kitchen:
 den:
   name: Den
   icon: mdi:television
-  view: yes
   entities:
     - light.den
     - switch.den_fan
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
     - media_player.family_room_speaker
+
+front_room:
+  name: Front Room
+  entities:
+    - light.front_room
+    - light.front_room2
+    - light.fr1
+    -  light.fr2
+
+
+######################
+#                    #
+# HA                 #
+#                    #
+######################
+
+HA:
+  name: HA
+  icon: mdi:auto-fix
+  view: yes
+  entities:
+    - group.automations
+    - group.scripts
+
+automations:
+  name: Automations
+  entities:
+    - automation.plugin_car_reminder
+    - automation.start_homekit
+
+scripts:
+  name: Scripts
+  entities:
+    - script.fix_hall_light
+
 juicenet:
   name: JuiceNet EVSE
   entities:
