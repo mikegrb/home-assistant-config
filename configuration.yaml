@@ -85,6 +85,11 @@ cloud:
 juicenet:
   access_token: !secret juicenet_api_key
 
+usps:
+    username: !secret usps_username
+    password: !secret usps_password
+    driver:   phantomjs
+
 zone:
   - name: School
     latitude: 39.487062

@@ -44,8 +44,10 @@ ted:
 people:
   name: Family
   entities:
-    - device_tracker.michaels_iphone
     - device_tracker.heidi_grebs_iphone
+    - device_tracker.michaels_iphone
+    - camera.heidi
+    - camera.mike
 weather:
   name: Weather
   entities:
