@@ -1,3 +1,5 @@
+# Evening reminder to plug in the car if we are both home
+
 - alias: Plug-In Car Reminder
   trigger:
     platform: time
@@ -19,10 +21,3 @@
       data:
         entity_id: media_player.family_room_speaker
         message: The car is not plugged in.
-- alias: 'Start HomeKit'
-  trigger:
-    - platform: homeassistant
-      event: start
-  action:
-    - delay: 00:05  # Waits 5 minutes
-    - service: homekit.start

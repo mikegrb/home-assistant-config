@@ -1,0 +1,8 @@
+# give HA 3 minutes to discover devices
+- alias: 'Start HomeKit'
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - delay: 00:03  # Waits 3 minutes
+    - service: homekit.start
