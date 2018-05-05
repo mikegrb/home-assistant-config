@@ -67,6 +67,14 @@ ring:
 
 camera:
   - platform: ring
+  - platform: generic
+    name: Mike
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.michaels_iphone.attributes.latitude }},{{ states.device_tracker.michaels_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.michaels_iphone.attributes.latitude }},{{ states.device_tracker.michaels_iphone.attributes.longitude }}
+    limit_refetch_to_url_change: true
+  - platform: generic
+    name: Heidi
+    still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.heidi_grebs_iphone.attributes.latitude }},{{ states.device_tracker.heidi_grebs_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.heidi_grebs_iphone.attributes.latitude }},{{ states.device_tracker.heidi_grebs_iphone.attributes.longitude }}
+    limit_refetch_to_url_change: true
 
 tts:
   - platform: google
