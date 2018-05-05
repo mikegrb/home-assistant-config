@@ -65,6 +65,15 @@ ring:
   username: michael@thegrebs.com
   password: !secret ring_password
 
+apple_tv:
+  # Living Room
+  - host: 192.168.86.208
+    login_id: !secret apple_tv_login_id
+    start_off: true
+  # Office
+  - host: 192.168.86.101
+    login_id: !secret apple_tv_login_id
+
 camera:
   - platform: ring
   - platform: generic
