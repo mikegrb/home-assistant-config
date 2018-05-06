@@ -1,14 +1,3 @@
-climate:
-  name: Climate
-  entities:
-    - climate.house
-    - sensor.house_thermostat_humidity
-    - binary_sensor.house_thermostat_has_leaf
-    - binary_sensor.house_thermostat_fan
-    - sensor.den_relay_humidity
-    - sensor.den_relay_temperature
-
-
 ######################
 #                    #
 # Rooms              #
@@ -23,6 +12,9 @@ rooms:
     - group.kitchen
     - group.den
     - group.front_room
+    - group.office
+    - group.master_bedroom
+    - group.halls
 
 kitchen:
   name: Kitchen
@@ -45,10 +37,46 @@ front_room:
   name: Front Room
   entities:
     - light.front_room
-    - light.front_room2
     - light.fr1
-    -  light.fr2
+    - light.fr2
 
+Office:
+  entities:
+    - light.office
+
+Master Bedroom:
+  entities:
+    - light.master_bedroom
+
+Halls:
+  entities:
+    - light.downstairs_hall
+    - light.upstairs_hall
+
+
+
+######################
+#                    #
+# Weather            #
+#                    #
+######################
+
+Weather:
+  icon: mdi:weather-cloudy
+  view: yes
+  entities:
+    - group.weather_2
+
+weather_2:
+  name: Weather
+  entities:
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_summary
+    - camera.radar
 
 ######################
 #                    #
@@ -63,6 +91,7 @@ HA:
   entities:
     - group.automations
     - group.scripts
+    - group.family
 
 automations:
   name: Automations
@@ -74,6 +103,12 @@ scripts:
   name: Scripts
   entities:
     - script.fix_hall_light
+
+######################
+#                    #
+# Other              #
+#                    #
+######################
 
 juicenet:
   name: JuiceNet EVSE
@@ -90,20 +125,21 @@ ted:
   entities:
     - sensor.main_mtu1_power
     - sensor.main_mtu1_voltage
-people:
-  name: Family
+
+Family:
   entities:
     - device_tracker.heidi_grebs_iphone
     - device_tracker.michaels_iphone
     - camera.heidi
     - camera.mike
-weather:
-  name: Weather
+
+Climate:
   entities:
-    - sensor.dark_sky_cloud_coverage
-    - sensor.dark_sky_precip_probability
-    - sensor.dark_sky_temperature
-    - sensor.dark_sky_humidity
-    - sensor.dark_sky_wind_speed
-    - sensor.dark_sky_summary
+    - climate.house
+    - sensor.house_thermostat_humidity
+    - binary_sensor.house_thermostat_has_leaf
+    - binary_sensor.house_thermostat_fan
+    - sensor.den_relay_humidity
+    - sensor.den_relay_temperature
+
 

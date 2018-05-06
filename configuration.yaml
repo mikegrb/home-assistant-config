@@ -84,6 +84,9 @@ camera:
     name: Heidi
     still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.heidi_grebs_iphone.attributes.latitude }},{{ states.device_tracker.heidi_grebs_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.heidi_grebs_iphone.attributes.latitude }},{{ states.device_tracker.heidi_grebs_iphone.attributes.longitude }}
     limit_refetch_to_url_change: true
+  - platform: generic
+    name: RADAR
+    still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=DIX&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=1&rainsnow=1&lightning=1&smooth=1&rand=25425955&lat=39.47&lon=-74.51&label=Pomona
 
 tts:
   - platform: google
@@ -92,6 +95,7 @@ cloud:
   alexa:
     filter:
       exclude_domains:
+        - group
         - switch
         - light
     entity_config:
@@ -134,6 +138,7 @@ homekit:
       - remote
       - sensor
     exclude_entities:
+      - group.kitchen
       - light.den_2
       - light.den_3
       - light.office_2
