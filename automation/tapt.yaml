@@ -1,0 +1,17 @@
+- alias: 'Tapt Top'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.top_tapt_button
+    to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.downstairs_hall
+
+- alias: 'Tapt Bottom'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bottom_tapt_button
+    to: 'on'
+  action:
+    - service: light.turn_off
+      entity_id: light.inside_lights

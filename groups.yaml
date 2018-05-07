@@ -101,6 +101,8 @@ automations:
     - automation.trash_day_reminder
     - automation.tj_bedtime
     - automation.tj_in_bed
+    - automation.tapt_top
+    - automation.tapt_bottom
 
 scripts:
   name: Scripts
