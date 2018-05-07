@@ -91,6 +91,13 @@ camera:
 tts:
   - platform: google
 
+notify:
+  - name: all
+    platform: group
+    services:
+      - service: ios_michaels_iphone
+      - service: ios_heidi_grebs_iphone
+
 cloud:
   alexa:
     filter:
