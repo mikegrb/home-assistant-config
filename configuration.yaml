@@ -73,6 +73,7 @@ apple_tv:
   # Office
   - host: 192.168.86.101
     login_id: !secret apple_tv_login_id
+    start_off: true
 
 camera:
   - platform: ring
@@ -116,7 +117,7 @@ juicenet:
 usps:
     username: !secret usps_username
     password: !secret usps_password
-    driver:   phantomjs
+    driver:   chrome
 
 zone:
   - name: School
