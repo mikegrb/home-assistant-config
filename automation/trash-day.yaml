@@ -1,0 +1,18 @@
+# Wednesday evening reminder for trash day
+
+- alias: Trash Day Reminder
+  trigger:
+    platform: time
+    at: '18:31:00'
+  condition:
+    - condition: time
+      weekday:
+        - wed
+  action:
+    - service: tts.google_say
+      data:
+        entity_id: media_player.family_room_speaker
+        message: Tomorrow is trash day.
+    - service: notify.all
+      data:
+        message: Tomorrow is trash day.

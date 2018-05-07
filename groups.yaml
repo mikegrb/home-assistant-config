@@ -98,6 +98,9 @@ automations:
   entities:
     - automation.plugin_car_reminder
     - automation.start_homekit
+    - automation.trash_day_reminder
+    - automation.tj_bedtime
+    - automation.tj_in_bed
 
 scripts:
   name: Scripts
