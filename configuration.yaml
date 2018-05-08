@@ -60,6 +60,9 @@ sensor:
       - wind_speed
       - cloud_cover
       - humidity
+  - platform: bitcoin
+    display_options:
+      - exchangerate
 
 ring:
   username: michael@thegrebs.com
