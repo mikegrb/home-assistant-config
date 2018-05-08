@@ -103,6 +103,7 @@ automations:
     - automation.tj_in_bed
     - automation.tapt_top
     - automation.tapt_bottom
+    - automation.bedtime
 
 scripts:
   name: Scripts
