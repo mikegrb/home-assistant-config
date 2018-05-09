@@ -16,6 +16,7 @@ ffmpeg:
 map:
 sun:
 ios:
+influxdb:
 
 http:
   api_password:    !secret http_password
@@ -63,7 +64,33 @@ sensor:
   - platform: bitcoin
     display_options:
       - exchangerate
-
+  - platform: template
+    sensors:
+      counter_lights_on:
+        unit_of_measurement: 'Lights'
+        friendly_name: 'Lights on'
+        entity_id:
+          - switch.on_air
+          - light.kitchen
+          - light.kitchen_table
+          - light.den
+          - switch.den_fan
+          - light.fr1
+          - light.fr2
+          - light.office
+          - light.master_bedroom
+          - light.downstairs_hall
+          - light.upstairs_hall
+        value_template: >
+          {% if states('group.all_inside') == 'on' %}
+          {% for e in states.group.all_inside.attributes.entity_id if states(e) == 'on'  %}
+          {% if loop.last %}
+          {{ loop.index }}
+          {% endif %}
+          {%- endfor -%}
+          {% else %}
+          0
+          {% endif %}
 ring:
   username: michael@thegrebs.com
   password: !secret ring_password
@@ -168,6 +195,17 @@ homekit:
       - light.downstairs
       - light.outside
       - light.upstairs
+
+input_number:
+  btc_limit:
+    name: Current BTC Limit Order
+    initial: 0
+    min: 0
+    max: 999999999
+    step: 1
+    mode: box
+    unit_of_measurement: BTC
+    icon: mdi:currency-btc
 
 group:      !include groups.yaml
 automation: !include_dir_merge_list automation/

@@ -108,3 +108,5 @@ light.front_room_2:
   hidden: true
 light.entertainment_area_1:
   hidden: true
+group.all_inside:
+  hidden: true

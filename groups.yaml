@@ -53,7 +53,19 @@ Halls:
     - light.downstairs_hall
     - light.upstairs_hall
 
-
+All Inside:
+  entities:
+    - switch.on_air
+    - light.kitchen
+    - light.kitchen_table
+    - light.den
+    - switch.den_fan
+    - light.fr1
+    - light.fr2
+    - light.office
+    - light.master_bedroom
+    - light.downstairs_hall
+    - light.upstairs_hall
 
 ######################
 #                    #
