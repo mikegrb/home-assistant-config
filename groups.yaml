@@ -116,6 +116,7 @@ automations:
     - automation.tapt_top
     - automation.tapt_bottom
     - automation.bedtime
+    - automation.upstairs_hall_timeout
 
 scripts:
   name: Scripts
