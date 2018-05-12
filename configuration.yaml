@@ -32,10 +32,14 @@ discovery:
 wink:
 
 panel_iframe:
-  router:
+  energy:
     title: Energy
     url: https://solar.thegrebs.com/
     icon: mdi:power-plug
+  grafana:
+    title: Grafana
+    url: http://192.168.86.105:3003/dashboard/db/main
+    icon: mdi:speedometer
 
 
 nest:
