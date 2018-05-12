@@ -15,6 +15,7 @@ rooms:
     - group.office
     - group.master_bedroom
     - group.halls
+    - group.lounge
 
 kitchen:
   name: Kitchen
@@ -23,12 +24,14 @@ kitchen:
     - switch.on_air
     - light.kitchen
     - light.kitchen_table
+    - switch.fountain
 den:
   name: Den
   icon: mdi:television
   entities:
     - light.den
     - switch.den_fan
+    - switch.bird
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
     - media_player.family_room_speaker
@@ -48,6 +51,10 @@ Master Bedroom:
   entities:
     - light.master_bedroom
 
+Lounge:
+  entities:
+    - light.lounge
+
 Halls:
   entities:
     - light.downstairs_hall
@@ -66,6 +73,7 @@ All Inside:
     - light.master_bedroom
     - light.downstairs_hall
     - light.upstairs_hall
+    - light.lounge
 
 ######################
 #                    #
@@ -117,6 +125,10 @@ automations:
     - automation.tapt_bottom
     - automation.bedtime
     - automation.upstairs_hall_timeout
+    - automation.elon_morning
+    - automation.elon_night
+    - automation.fountain_on
+    - automation.fountain_off
 
 scripts:
   name: Scripts
