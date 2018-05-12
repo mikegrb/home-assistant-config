@@ -91,6 +91,10 @@ sensor:
           {% else %}
           0
           {% endif %}
+  - platform: ups
+    username: mikegrb
+    password: !secret ups_password
+
 ring:
   username: michael@thegrebs.com
   password: !secret ring_password
