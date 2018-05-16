@@ -4,10 +4,19 @@
       entity_id: sensor.michaels_iphone_battery_state
       to: 'Charging'
     condition:
-      - condition: time
-        after: '21:00:00'
+      condition: or
+      conditions:
+        - condition: time
+          after: '21:00:00'
+        - condition: time
+          before: '04:00:00'
     action:
       - service: light.turn_off
         data:
           entity_id:
             - light.inside_lights
+      - service: switch.turn_off
+        data:
+          entity_id:
+            - switch.outside_back
+            - switch.fountain
