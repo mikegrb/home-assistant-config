@@ -31,6 +31,10 @@ updater:
 
 discovery:
 
+hue:
+  bridges:
+    - host: 192.168.86.201
+
 wink:
 
 panel_iframe:
