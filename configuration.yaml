@@ -19,6 +19,7 @@ map:
 sun:
 ios:
 influxdb:
+  host: 192.168.86.105
 
 http:
   api_password:    !secret http_password
@@ -36,6 +37,9 @@ hue:
     - host: 192.168.86.201
 
 wink:
+
+zwave:
+  usb_path: /dev/ttyACM0
 
 panel_iframe:
   energy:
