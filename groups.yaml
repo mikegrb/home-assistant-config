@@ -24,6 +24,7 @@ kitchen:
     - switch.on_air
     - light.kitchen
     - light.kitchen_table
+    - light.kitchen_accent
     - switch.fountain
 den:
   name: Den

@@ -86,10 +86,10 @@ sensor:
           - switch.on_air
           - light.kitchen
           - light.kitchen_table
+          - light.kitchen_accent
           - light.den
           - switch.den_fan
-          - light.fr1
-          - light.fr2
+          - light.front_room
           - light.office
           - light.master_bedroom
           - light.downstairs_hall
