@@ -1,4 +1,20 @@
+sensor.kitchen_zw100_burglar:
+  hidden: true
+sensor.kitchen_zw100_sourcenodeid:
+  hidden: true
+sensor.kitchen_zw100_ultraviolet:
+  hidden: true
+light.undercounter_east:
+  hidden: true
+light.undercounter_west:
+  hidden: true
+light.undercounter_west_2:
+  hidden: true
 climate.home_house_thermostat:
+  hidden: true
+sensor.alarm_level:
+  hidden: true
+sensor.alarm_type:
   hidden: true
 binary_sensor.house_thermostat_is_using_emergency_heat:
   hidden: true
@@ -108,5 +124,10 @@ light.front_room_2:
   hidden: true
 light.entertainment_area_1:
   hidden: true
+
 group.all_inside:
   hidden: true
+
+# icons
+switch.den_fan:
+  icon: mdi:fan

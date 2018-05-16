@@ -228,6 +228,11 @@ input_number:
     unit_of_measurement: BTC
     icon: mdi:currency-btc
 
+input_boolean:
+  kitchen_accent_motion_triggered:
+    name: Kitchen Accent Turned on by motion
+    initial: off
+
 group:      !include groups.yaml
 automation: !include_dir_merge_list automation/
 script:     !include scripts.yaml

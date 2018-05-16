@@ -26,6 +26,11 @@ kitchen:
     - light.kitchen_table
     - light.kitchen_accent
     - switch.fountain
+    - sensor.kitchen_zw100_temperature
+    - sensor.kitchen_zw100_relative_humidity
+    - sensor.kitchen_zw100_luminance
+    - binary_sensor.sensor
+
 den:
   name: Den
   icon: mdi:television
