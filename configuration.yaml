@@ -172,6 +172,10 @@ usps:
     password: !secret usps_password
     driver:   chrome
 
+neato:
+  username: michael@thegrebs.com
+  password: !secret neato_pass
+
 zone:
   - name: School
     latitude: 39.487062
