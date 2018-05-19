@@ -36,7 +36,7 @@ den:
   icon: mdi:television
   entities:
     - light.den
-    - switch.den_fan
+    - fan.den
     - switch.bird
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
@@ -56,6 +56,7 @@ Office:
 Master Bedroom:
   entities:
     - light.master_bedroom
+    - fan.master_bedroom
 
 Lounge:
   entities:
@@ -106,43 +107,6 @@ weather_2:
 
 ######################
 #                    #
-# HA                 #
-#                    #
-######################
-
-HA:
-  name: HA
-  icon: mdi:auto-fix
-  view: yes
-  entities:
-    - group.automations
-    - group.scripts
-    - group.family
-
-automations:
-  name: Automations
-  entities:
-    - automation.plugin_car_reminder
-    - automation.start_homekit
-    - automation.trash_day_reminder
-    - automation.tj_bedtime
-    - automation.tj_in_bed
-    - automation.tapt_top
-    - automation.tapt_bottom
-    - automation.bedtime
-    - automation.upstairs_hall_timeout
-    - automation.elon_morning
-    - automation.elon_night
-    - automation.fountain_on
-    - automation.fountain_off
-
-scripts:
-  name: Scripts
-  entities:
-    - script.fix_hall_light
-
-######################
-#                    #
 # Other              #
 #                    #
 ######################
@@ -179,4 +143,46 @@ Climate:
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
 
+######################
+#                    #
+# HA                 #
+#                    #
+######################
 
+HA:
+  name: HA
+  icon: mdi:auto-fix
+  view: yes
+  entities:
+    - group.automations
+    - group.scripts
+    - group.family
+
+automations:
+  name: Automations
+  entities:
+    - automation.plugin_car_reminder
+    - automation.start_homekit
+    - automation.trash_day_reminder
+    - automation.tj_bedtime
+    - automation.tj_in_bed
+    - automation.tapt_top
+    - automation.tapt_bottom
+    - automation.bedtime
+    - automation.upstairs_hall_timeout
+    - automation.elon_morning
+    - automation.elon_night
+    - automation.fountain_on
+    - automation.fountain_off
+    - automation.kitchen_accent_motion_trigger
+    - automation.kitchen_accent_motion_reset
+    - automation.fountain_motion_trigger
+    - autonation.fountain_motion_reset
+    - input_boolean.kitchen_accent_motion_triggered
+    - timer.fountain
+    - timer.kitchen_accent
+
+scripts:
+  name: Scripts
+  entities:
+    - script.fix_hall_light

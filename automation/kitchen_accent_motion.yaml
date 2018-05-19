@@ -8,19 +8,20 @@
     entity_id: sensor.kitchen_zw100_luminance
     below: 10
   action:
-    service: homeassistant.turn_on
-    data:
-      entity_id:
-        - light.kitchen_accent
-        - input_boolean.kitchen_accent_motion_triggered
+    - service: homeassistant.turn_on
+      data:
+        entity_id:
+          - light.kitchen_accent
+          - input_boolean.kitchen_accent_motion_triggered
+    - service: timer.start
+      entity_id: timer.kitchen_accent
 
 - alias: 'Kitchen Accent Motion Reset'
   trigger:
-    platform: state
-    entity_id: light.kitchen_accent
-    to: 'on'
-    for:
-      minutes: 5
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.kitchen_accent
   condition:
     condition: state
     entity_id: input_boolean.kitchen_accent_motion_triggered

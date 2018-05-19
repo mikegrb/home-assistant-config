@@ -129,5 +129,43 @@ group.all_inside:
   hidden: true
 
 # icons
-switch.den_fan:
+fan.den:
   icon: mdi:fan
+fan.master_bedroom:
+  icon: mdi:fan
+
+sensor.fountain_current:
+  hidden: true
+sensor.fountain_exporting:
+  hidden: true
+sensor.fountain_interval:
+  hidden: true
+sensor.fountain_interval_2:
+  hidden: true
+sensor.fountain_interval_3:
+  hidden: true
+sensor.fountain_interval_4:
+  hidden: true
+sensor.fountain_power:
+  hidden: true
+sensor.fountain_power_management:
+  hidden: true
+sensor.fountain_previous_reading:
+  hidden: true
+sensor.fountain_previous_reading_2:
+  hidden: true
+sensor.fountain_previous_reading_3:
+  hidden: true
+sensor.fountain_previous_reading_4:
+  hidden: true
+sensor.fountain_sourcenodeid:
+  hidden: true
+sensor.fountain_voltage:
+  hidden: true
+sensor.alarm_type_2:
+  hidden: true
+sensor.alarm_level_2:
+  hidden: true
+sensor.unknown_2:
+  hidden: true
+

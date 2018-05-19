@@ -157,6 +157,8 @@ cloud:
         - group
         - switch
         - light
+      include_entities:
+        - switch.fountain
     entity_config:
       script.fix_hall_light:
         name: Fix Hall Light
@@ -232,6 +234,12 @@ input_boolean:
   kitchen_accent_motion_triggered:
     name: Kitchen Accent Turned on by motion
     initial: off
+
+timer:
+  fountain:
+    duration: '00:30:00'
+  kitchen_accent:
+    duration: '00:10:00'
 
 group:      !include groups.yaml
 automation: !include_dir_merge_list automation/
