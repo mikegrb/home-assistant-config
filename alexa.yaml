@@ -1,0 +1,17 @@
+ActivateFan:
+  action:
+    service: fan.toggle
+    data_template:
+      entity_id: fan.{{ Fan | replace(" ", "_") }}
+  speech:
+    type: plain
+    text: OK
+SetFan:
+  action:
+    service: fan.set_speed
+    data_template:
+      entity_id: fan.{{ Fan | replace(" ", "_") }}
+      speed: "{{ Speed }}"
+  speech:
+    type: plain
+    text: OK
