@@ -92,7 +92,7 @@ sensor:
           - light.kitchen_table
           - light.kitchen_accent
           - light.den
-          - switch.den_fan
+          - fan.den_fan
           - light.front_room
           - light.office
           - light.master_bedroom

@@ -13,5 +13,5 @@
     entity_id: binary_sensor.bottom_tapt_button
     to: 'on'
   action:
-    - service: light.turn_off
-      entity_id: light.inside_lights
+    - service: homeassistant.turn_off
+      entity_id: group.all_inside
