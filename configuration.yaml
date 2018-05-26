@@ -25,7 +25,7 @@ http:
   api_password:    !secret http_password
   ssl_certificate: /config/fullchain.pem
   ssl_key:         /config/privkey.pem
-  base_url:        home.thegrebs.com:8123
+  base_url:        home.thegrebs.com
 
 updater:
   include_used_components: true
