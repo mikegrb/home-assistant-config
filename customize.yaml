@@ -169,3 +169,37 @@ sensor.alarm_level_2:
 sensor.unknown_2:
   hidden: true
 
+sensor.bird_alarm_type:
+  hidden: true
+sensor.bird_alarm_level:
+  hidden: true
+sensor.bird:
+  hidden: true
+sensor.bird_power:
+  hidden: true
+sensor.bird_voltage:
+  hidden: true
+sensor.bird_current:
+  hidden: true
+sensor.bird_exporting:
+  hidden: true
+sensor.bird_sourcenodeid:
+  hidden: true
+sensor.bird_power_management:
+  hidden: true
+sensor.bird_previous_reading:
+  hidden: true
+sensor.bird_interval:
+  hidden: true
+sensor.bird_previous_reading_2:
+  hidden: true
+sensor.bird_interval_2:
+  hidden: true
+sensor.bird_previous_reading_3:
+  hidden: true
+sensor.bird_interval_3:
+  hidden: true
+sensor.bird_previous_reading_4:
+  hidden: true
+sensor.bird_interval_4:
+  hidden: true
