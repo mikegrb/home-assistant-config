@@ -81,7 +81,7 @@ All Inside:
     - light.downstairs_hall
     - light.upstairs_hall
     - light.lounge
-    - light.fountain
+    - switch.fountain
 
 ######################
 #                    #
@@ -184,7 +184,7 @@ automations:
     - automation.kitchen_accent_motion_trigger
     - automation.kitchen_accent_motion_reset
     - automation.fountain_motion_trigger
-    - autonation.fountain_motion_reset
+    - automation.fountain_motion_reset
     - automation.stopped_printing
     - input_boolean.kitchen_accent_motion_triggered
     - timer.fountain
