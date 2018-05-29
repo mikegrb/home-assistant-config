@@ -163,20 +163,6 @@ notify:
       - service: ios_michaels_iphone
       - service: ios_heidi_grebs_iphone
 
-cloud:
-  alexa:
-    filter:
-      exclude_domains:
-        - group
-        - switch
-        - light
-      include_entities:
-        - switch.fountain
-    entity_config:
-      script.fix_hall_light:
-        name: Fix Hall Light
-        display_categories: SWITCH
-
 juicenet:
   access_token: !secret juicenet_api_key
 
@@ -203,6 +189,40 @@ zone:
     longitude: -74.462958
     radius: 70
     icon: mdi:karate
+
+cloud:
+  alexa:
+    filter:
+      include_domains:
+        - switch
+        - light
+        - fan
+      include_entities:
+        - script.fix_hall_light
+      exclude_entities:
+        - light.den_2
+        - light.den_3
+        - light.office_2
+        - light.office_3
+        - light.fr_1
+        - light.fr_1_2
+        - light.fr_2
+        - light.fr_2_2
+        - light.front_room_2
+        - light.entertainment_area_1
+        - light.inside_lights
+        - switch.outside_front
+        - switch.outside_lights
+        - light.outside
+        - light.downstairs
+        - light.outside
+        - light.upstairs
+    entity_config:
+      script.fix_hall_light:
+        name: Fix Hall Light
+        display_categories: SWITCH
+
+alexa:
 
 homekit:
   auto_start: False
@@ -256,5 +276,4 @@ timer:
 group:      !include groups.yaml
 automation: !include_dir_merge_list automation/
 script:     !include scripts.yaml
-alexa:
 intent_script: !include alexa.yaml
