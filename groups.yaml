@@ -144,6 +144,12 @@ Climate:
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
 
+OctoPrint:
+  entities:
+    - sensor.octoprint_current_state
+    - sensor.octoprint_job_percentage
+    - camera.octoprint
+
 ######################
 #                    #
 # HA                 #
@@ -179,6 +185,7 @@ automations:
     - automation.kitchen_accent_motion_reset
     - automation.fountain_motion_trigger
     - autonation.fountain_motion_reset
+    - automation.stopped_printing
     - input_boolean.kitchen_accent_motion_triggered
     - timer.fountain
     - timer.kitchen_accent

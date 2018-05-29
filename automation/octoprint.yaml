@@ -1,0 +1,10 @@
+- alias: 'Stopped Printing'
+  trigger:
+    platform: state
+    entity_id: sensor.octoprint_current_state
+    from: 'Printing'
+  action:
+    - service: tts.google_say
+      data:
+        entity_id: media_player.family_room_speaker
+        message: OctoPrint stopped printing.
