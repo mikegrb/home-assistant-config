@@ -27,6 +27,11 @@ http:
   ssl_key:         /config/privkey.pem
   base_url:        home.thegrebs.com
 
+mqtt:
+  broker: core-mosquitto
+  username: mqtt
+  password: !secret mqtt_pass
+
 updater:
   include_used_components: true
 
@@ -211,8 +216,7 @@ cloud:
         - switch
         - light
         - fan
-      include_entities:
-        - script.fix_hall_light
+        - script
       exclude_entities:
         - light.den_2
         - light.den_3
@@ -234,6 +238,9 @@ cloud:
     entity_config:
       script.fix_hall_light:
         name: Fix Hall Light
+        display_categories: SWITCH
+      script.sleep_imac:
+        name: Sleep iMac
         display_categories: SWITCH
 
 alexa:
