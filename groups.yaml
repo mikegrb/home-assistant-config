@@ -108,6 +108,20 @@ weather_2:
 
 ######################
 #                    #
+# Cameras            #
+#                    #
+######################
+
+Cameras:
+  icon: mdi:cctv
+  view: yes
+  entities:
+    - camera.driveway
+    - camera.front_door
+    - camera.octoprint
+
+######################
+#                    #
 # Other              #
 #                    #
 ######################
