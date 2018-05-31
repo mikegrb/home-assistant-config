@@ -171,6 +171,10 @@ camera:
     name: OctoPrint
     still_image_url: http://192.168.86.120/webcam/?action=snapshot
     mjpeg_url: http://192.168.86.120/webcam/?action=stream
+  - platform: uvc
+    nvr: 192.168.86.126
+    key: !secret uvc_api_key
+    password: !secret uvc_pass
 
 tts:
   - platform: google

@@ -118,6 +118,8 @@ Cameras:
   entities:
     - camera.driveway
     - camera.front_door
+    - camera.kitchen
+    - camera.office
     - camera.octoprint
 
 ######################
