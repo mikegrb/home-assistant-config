@@ -197,3 +197,58 @@ sensor.bird_previous_reading_4:
   hidden: true
 sensor.bird_interval_4:
   hidden: true
+
+sensor.washer_exporting:
+  hidden: true
+sensor.washer_sourcenodeid:
+  hidden: true
+sensor.washer_power_management:
+  hidden: true
+switch.washer_switch:
+  hidden: true
+sensor.washer_alarm_type:
+  hidden: true
+sensor.washer_alarm_level:
+  hidden: true
+sensor.washer_energy:
+  hidden: true
+sensor.washer_voltage:
+  hidden: true
+
+
+sensor.dryer_voltage:
+  hidden: true
+sensor.dryer_exporting:
+  hidden: true
+sensor.dryer_sourcenodeid:
+  hidden: true
+sensor.dryer_power_management:
+  hidden: true
+switch.dryer_switch:
+  hidden: true
+sensor.dryer_alarm_type:
+  hidden: true
+sensor.dryer_alarm_level:
+  hidden: true
+sensor.dryer_energy:
+  hidden: true
+sensor.dryer_previous_reading_2:
+  hidden: true
+sensor.dryer_interval_2:
+  hidden: true
+sensor.dryer_previous_reading_3:
+  hidden: true
+sensor.dryer_interval_3:
+  hidden: true
+sensor.dryer_previous_reading_4:
+  hidden: true
+sensor.dryer_interval_4:
+  hidden: true
+sensor.dryer_previous_reading:
+  hidden: true
+sensor.dryer_interval:
+  hidden: true
+sensor.dryer_current:
+  hidden: true
+sensor.dryer_power:
+  hidden: true

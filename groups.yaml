@@ -16,6 +16,7 @@ rooms:
     - group.master_bedroom
     - group.halls
     - group.lounge
+    - group.laundry
 
 kitchen:
   name: Kitchen
@@ -61,6 +62,11 @@ Master Bedroom:
 Lounge:
   entities:
     - light.lounge
+
+Laundry:
+  entities:
+    - sensor.washer
+    - sensor.dryer
 
 Halls:
   entities:

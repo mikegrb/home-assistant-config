@@ -1,0 +1,57 @@
+homeassistant:
+  customize:
+    sensor.dryer:
+      icon: mdi:tumble-dryer
+    sensor.washer:
+      icon: mdi:washing-machine
+
+sensor:
+  - platform: template
+    sensors:
+      dryer:
+        friendly_name: Dryer
+        value_template: >-
+          {% if states.sensor.dryer_current|float < 2 %}
+            Idle
+          {% else %}
+            Running
+          {% endif %}
+
+      washer:
+        friendly_name: Washer
+        value_template: >-
+          {% if states.sensor.washer_current|float < 2 %}
+            Idle
+          {% else %}
+          Running
+          {% endif %}
+
+automation:
+  - alias: Dryer Done
+    trigger:
+      - platform: state
+        entity_id: sensor.dryer
+        to: 'Idle'
+    action:
+      - service: tts.google_say
+        data:
+          entity_id: media_player.family_room_speaker
+          message: The dryer is done.
+      - service: notify.all
+        data:
+          message: The dryer is done.
+  - alias: Washer Done
+    trigger:
+      - platform: state
+        entity_id: sensor.washer
+        to: 'Idle'
+        for:
+          minutes: 1
+    action:
+      - service: tts.google_say
+        data:
+          entity_id: media_player.family_room_speaker
+          message: The washer is done.
+      - service: notify.all
+        data:
+          message: The washer is done.

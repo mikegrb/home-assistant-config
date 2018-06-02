@@ -366,3 +366,123 @@ switch.on_air:
   name: On Air
   platform: zwave
   unique_id: 12-72057594244055040
+sensor.washer_power:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261045378
+sensor.washer_voltage:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261045506
+sensor.washer_current:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261045570
+sensor.washer_exporting:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261045760
+sensor.washer_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077473
+sensor.washer_power_management:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077617
+zwave.washer:
+  name:
+  platform: zwave
+  unique_id: node-13
+switch.washer_switch:
+  name:
+  platform: zwave
+  unique_id: 13-72057594260832256
+sensor.washer_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077441
+sensor.washer_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077457
+sensor.washer_energy:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261045250
+sensor.dryer_power:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822594
+sensor.dryer_voltage:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822722
+sensor.dryer_current:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822786
+sensor.dryer_exporting:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822976
+sensor.dryer_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854689
+sensor.dryer_power_management:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854833
+zwave.dryer:
+  name:
+  platform: zwave
+  unique_id: node-14
+switch.dryer_switch:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277609472
+sensor.dryer_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854657
+sensor.dryer_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854673
+sensor.dryer_energy:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822466
+sensor.dryer_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822482
+sensor.dryer_interval:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822499
+sensor.dryer_previous_reading_2:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822610
+sensor.dryer_interval_2:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822627
+sensor.dryer_previous_reading_3:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822738
+sensor.dryer_interval_3:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822755
+sensor.dryer_previous_reading_4:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822802
+sensor.dryer_interval_4:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277822819
