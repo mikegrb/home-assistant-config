@@ -1,0 +1,16 @@
+
+michaels_iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: michaels iphone
+  picture:
+  track: true
+
+heidi_grebs_iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: heidi grebs iphone
+  picture:
+  track: true

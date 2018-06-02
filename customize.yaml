@@ -40,18 +40,12 @@ sensor.michaels_iphone_battery_level:
   hidden: true
 sensor.michaels_iphone_battery_state:
   hidden: true
-sensor.den_relay_humidity:
-  friendly_name: Den Humidity
-sensor.den_relay_temperature:
-  friendly_name: Den Temperature
 binary_sensor.house_thermostat_fan:
   friendly_name: House Fan
 sensor.house_thermostat_humidity:
   friendly_name: House Humidity
 binary_sensor.house_thermostat_has_leaf:
   friendly_name: House has Leaf
-binary_sensor.den_relay_presence:
-  hidden: true
 binary_sensor.driveway_motion:
   hidden: true
 binary_sensor.front_door_motion:
@@ -82,19 +76,11 @@ binary_sensor.top_tapt_button:
   hidden: true
 binary_sensor.tapt_smart_switch:
   hidden: true
-binary_sensor.den_relay:
-  hidden: true
-binary_sensor.den_relays_top_button:
-  hidden: true
-binary_sensor.den_relays_bottom_button:
-  hidden: true
 binary_sensor.philips_hue:
   hidden: true
 binary_sensor.hub:
   hidden: true
 binary_sensor.gang:
-  hidden: true
-sensor.den_relay_proximity:
   hidden: true
 switch.outside_front:
   hidden: true
@@ -135,6 +121,12 @@ fan.den:
   icon: mdi:fan
 fan.master_bedroom:
   icon: mdi:fan
+sensor.kitchen_zw100_relative_humidity:
+  icon: mdi:water-percent
+switch.fountain:
+  icon: mdi:fountain
+light.front_room:
+  icon: mdi:floor-lamp
 
 sensor.fountain_current:
   hidden: true
