@@ -1,0 +1,368 @@
+media_player.apple_tv:
+  name:
+  platform: apple_tv
+  unique_id: 6f71594e52d0ca5ba489ab902a68da9c12ac5c72fff6233089ee10c3f610c96d
+media_player.office:
+  name:
+  platform: apple_tv
+  unique_id: a593c4d94dd8941c09f38ba16f8ea93dfb1c5871858a3d6eec9b225561ab26d8
+remote.apple_tv:
+  name:
+  platform: apple_tv
+  unique_id: 6f71594e52d0ca5ba489ab902a68da9c12ac5c72fff6233089ee10c3f610c96d
+remote.office:
+  name:
+  platform: apple_tv
+  unique_id: a593c4d94dd8941c09f38ba16f8ea93dfb1c5871858a3d6eec9b225561ab26d8
+media_player.family_room_speaker:
+  name:
+  platform: cast
+  unique_id: 22837c1a-0e2b-6c34-8e58-8f5e018c4bf2
+media_player.mikes_office_chromecast:
+  name:
+  platform: cast
+  unique_id: 18556f0f-6469-637d-517c-08cdbe8ef2cc
+media_player.family_room_tv:
+  name:
+  platform: cast
+  unique_id: bb547b17-1dd9-1308-8757-1b8d9b878c74
+climate.house:
+  name:
+  platform: nest
+  unique_id: PgLACxGFTQH3MkV5vWRON4dvWCJKQL2v
+media_player.chrome:
+  name:
+  platform: plex
+  unique_id: t47kfztwf0jf1u3dxkzsssvj
+media_player.michaels_iphone:
+  name:
+  platform: plex
+  unique_id: A49ABF67-D280-4B1D-A9B1-2C78EDC68A9F
+sensor.juicenet_device_charge_time:
+  name:
+  platform: juicenet
+  unique_id: 0814081155400148500317015420-charge_time
+sensor.juicenet_device_temperature:
+  name:
+  platform: juicenet
+  unique_id: 0814081155400148500317015420-temperature
+sensor.juicenet_device_energy_added:
+  name:
+  platform: juicenet
+  unique_id: 0814081155400148500317015420-energy_added
+sensor.juicenet_device_charging_status:
+  name:
+  platform: juicenet
+  unique_id: 0814081155400148500317015420-status
+sensor.juicenet_device_amps:
+  name:
+  platform: juicenet
+  unique_id: 0814081155400148500317015420-amps
+sensor.juicenet_device_voltage:
+  name:
+  platform: juicenet
+  unique_id: 0814081155400148500317015420-voltage
+sensor.juicenet_device_watts:
+  name:
+  platform: juicenet
+  unique_id: 0814081155400148500317015420-watts
+media_player.unnamed_device:
+  name: Lounge Smart TV
+  platform: plex
+  unique_id: la0zvfudg4o3lebuqq9va6i7
+media_player.apple_tv_2:
+  name: Living Room Apple TV
+  platform: plex
+  unique_id: 9BC24C37-7C6B-4B23-A0B0-29AF864D7052
+sensor.michaels_iphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_michaels_iphone
+sensor.michaels_iphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_michaels_iphone
+sensor.heidi_grebs_iphone_battery_state:
+  name:
+  platform: ios
+  unique_id: state_heidi_grebs_iphone
+sensor.heidi_grebs_iphone_battery_level:
+  name:
+  platform: ios
+  unique_id: level_heidi_grebs_iphone
+light.den_3:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:d8:21:4a-0b
+light.fr_2_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:d8:31:d4-0b
+light.office_3:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:e8:16:7a-0b
+light.fr_1_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:da:20:30-0b
+media_player.office_3:
+  name:
+  platform: plex
+  unique_id: DF89DE03-0A46-497D-A37D-1F138AF262C1
+media_player.chrome_2:
+  name:
+  platform: plex
+  unique_id: tgmo82qb6c10um6n6qmfmg16
+light.hue_lightstrip_plus_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:af:2b:8f-0b
+light.undercounter_west:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:af:2b:46-0b
+sensor.mikegrb_pro_silver_battery_level:
+  name:
+  platform: ios
+  unique_id: level_mikegrb_pro_silver
+sensor.mikegrb_pro_silver_battery_state:
+  name:
+  platform: ios
+  unique_id: state_mikegrb_pro_silver
+zwave.aeotec_zw090_zstick_gen5_us:
+  name:
+  platform: zwave
+  unique_id: node-1
+sensor.alarm_type:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.alarm_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528081
+binary_sensor.sensor:
+  name: Kitchen Motion
+  platform: zwave
+  unique_id: 2-72057594076463104
+sensor.kitchen_zw100_temperature:
+  name: Kitchen Temperature
+  platform: zwave
+  unique_id: 2-72057594076479506
+sensor.kitchen_zw100_luminance:
+  name: Kitchen Luminance
+  platform: zwave
+  unique_id: 2-72057594076479538
+sensor.kitchen_zw100_relative_humidity:
+  name: Kitchen Humidity
+  platform: zwave
+  unique_id: 2-72057594076479570
+sensor.kitchen_zw100_ultraviolet:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479922
+sensor.kitchen_zw100_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.kitchen_zw100_burglar:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528225
+zwave.aeotec_zw100_multisensor_6:
+  name: Kitchen ZW100
+  platform: zwave
+  unique_id: node-2
+switch.fountain:
+  name: Fountain
+  platform: zwave
+  unique_id: 4-72057594109837312
+zwave.fountain:
+  name:
+  platform: zwave
+  unique_id: node-4
+sensor.alarm_type_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082497
+sensor.alarm_level_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082513
+sensor.unknown_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050306
+sensor.fountain_power:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050434
+sensor.fountain_voltage:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050562
+sensor.fountain_current:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050626
+sensor.fountain_exporting:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050816
+sensor.fountain_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082529
+sensor.fountain_power_management:
+  name:
+  platform: zwave
+  unique_id: 4-72057594111082673
+sensor.fountain_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050322
+sensor.fountain_interval:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050339
+sensor.fountain_previous_reading_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050450
+sensor.fountain_interval_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050467
+sensor.fountain_previous_reading_3:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050578
+sensor.fountain_interval_3:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050595
+sensor.fountain_previous_reading_4:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050642
+sensor.fountain_interval_4:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110050659
+zwave.master_bedroom_fan:
+  name:
+  platform: zwave
+  unique_id: node-6
+fan.master_bedroom:
+  name: Master Bedroom Fan
+  platform: zwave
+  unique_id: 6-72057594143408129
+zwave.den_fan:
+  name:
+  platform: zwave
+  unique_id: node-7
+fan.den:
+  name: Den Fan
+  platform: zwave
+  unique_id: 7-72057594160185345
+light.kitchen_table:
+  name: Kitchen Table
+  platform: zwave
+  unique_id: 8-72057594176962561
+zwave.kitchen_table:
+  name:
+  platform: zwave
+  unique_id: node-8
+media_player.chrome_3:
+  name:
+  platform: plex
+  unique_id: 1v3kumw63qgwrbpe2wyusqtg
+switch.bird:
+  name: Bird
+  platform: zwave
+  unique_id: 11-72057594227277824
+sensor.bird_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523009
+sensor.bird_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523025
+sensor.bird:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490818
+sensor.bird_power:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490946
+zwave.bird:
+  name:
+  platform: zwave
+  unique_id: node-11
+sensor.bird_voltage:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491074
+sensor.bird_current:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491138
+sensor.bird_exporting:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491328
+sensor.bird_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523041
+sensor.bird_power_management:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523185
+sensor.bird_previous_reading:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490834
+sensor.bird_interval:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490851
+sensor.bird_previous_reading_2:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490962
+sensor.bird_interval_2:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227490979
+sensor.bird_previous_reading_3:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491090
+sensor.bird_interval_3:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491107
+sensor.bird_previous_reading_4:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491154
+sensor.bird_interval_4:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227491171
+media_player.office_2:
+  name:
+  platform: roku
+  unique_id: 2N002F753963
+zwave.on_air:
+  name: On Air
+  platform: zwave
+  unique_id: node-12
+switch.on_air:
+  name: On Air
+  platform: zwave
+  unique_id: 12-72057594244055040
