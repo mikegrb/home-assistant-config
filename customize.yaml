@@ -198,6 +198,8 @@ sensor.bird_previous_reading_4:
 sensor.bird_interval_4:
   hidden: true
 
+sensor.washer_voltage:
+  hidden: true
 sensor.washer_exporting:
   hidden: true
 sensor.washer_sourcenodeid:
@@ -212,9 +214,26 @@ sensor.washer_alarm_level:
   hidden: true
 sensor.washer_energy:
   hidden: true
-sensor.washer_voltage:
+sensor.washer_previous_reading:
   hidden: true
-
+sensor.washer_interval:
+  hidden: true
+sensor.washer_previous_reading_2:
+  hidden: true
+sensor.washer_interval_2:
+  hidden: true
+sensor.washer_previous_reading_3:
+  hidden: true
+sensor.washer_interval_3:
+  hidden: true
+sensor.washer_previous_reading_4:
+  hidden: true
+sensor.washer_interval_4:
+  hidden: true
+sensor.washer_current:
+  hidden: true
+sensor.washer_power:
+  hidden: true
 
 sensor.dryer_voltage:
   hidden: true

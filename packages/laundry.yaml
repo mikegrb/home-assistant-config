@@ -10,8 +10,9 @@ sensor:
     sensors:
       dryer:
         friendly_name: Dryer
+        entity_id: sensor.dryer_current
         value_template: >-
-          {% if states.sensor.dryer_current|float < 2 %}
+          {% if states.sensor.dryer_current.state|float < 2 %}
             Idle
           {% else %}
             Running
@@ -19,8 +20,9 @@ sensor:
 
       washer:
         friendly_name: Washer
+        entity_id: sensor.washer_current
         value_template: >-
-          {% if states.sensor.washer_current|float < 2 %}
+          {% if states.sensor.washer_current.state|float < 1 %}
             Idle
           {% else %}
           Running
@@ -32,6 +34,7 @@ automation:
       - platform: state
         entity_id: sensor.dryer
         to: 'Idle'
+        from: 'Running'
     action:
       - service: tts.google_say
         data:
@@ -45,6 +48,7 @@ automation:
       - platform: state
         entity_id: sensor.washer
         to: 'Idle'
+        from: 'Running'
         for:
           minutes: 1
     action:
