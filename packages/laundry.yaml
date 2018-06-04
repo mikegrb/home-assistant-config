@@ -22,7 +22,7 @@ sensor:
         friendly_name: Washer
         entity_id: sensor.washer_current
         value_template: >-
-          {% if states.sensor.washer_current.state|float < 1 %}
+          {% if states.sensor.washer_current.state|float < 0.01 %}
             Idle
           {% else %}
           Running
@@ -50,7 +50,7 @@ automation:
         to: 'Idle'
         from: 'Running'
         for:
-          minutes: 1
+          seconds: 15
     action:
       - service: tts.google_say
         data:
