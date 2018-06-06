@@ -40,6 +40,10 @@ sensor.michaels_iphone_battery_level:
   hidden: true
 sensor.michaels_iphone_battery_state:
   hidden: true
+sensor.mikegrb_pro_silver_battery_level:
+  hidden: true
+sensor.mikegrb_pro_silver_battery_state:
+  hidden: true
 binary_sensor.house_thermostat_fan:
   friendly_name: House Fan
 sensor.house_thermostat_humidity:
