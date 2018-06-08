@@ -252,6 +252,36 @@ cloud:
       script.sleep_imac:
         name: Sleep iMac
         display_categories: SWITCH
+  google_actions:
+    filter:
+      include_domains:
+        - switch
+        - light
+        - fan
+        - script
+      exclude_entities:
+        - light.den_2
+        - light.den_3
+        - light.office_2
+        - light.office_3
+        - light.fr_1
+        - light.fr_1_2
+        - light.fr_2
+        - light.fr_2_2
+        - light.front_room_2
+        - light.entertainment_area_1
+        - light.inside_lights
+        - switch.outside_front
+        - switch.outside_lights
+        - light.outside
+        - light.downstairs
+        - light.outside
+        - light.upstairs
+    entity_config:
+      script.fix_hall_light:
+        name: Fix Hall Light
+      script.sleep_imac:
+        name: Sleep iMac
 
 alexa:
 
