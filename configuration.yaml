@@ -29,9 +29,9 @@ influxdb:
 
 http:
   api_password:    !secret http_password
-  ssl_certificate: /config/fullchain.pem
-  ssl_key:         /config/privkey.pem
-  base_url:        home.thegrebs.com
+  #  ssl_certificate: /ssl/fullchain.pem
+  # ssl_key:         /ssl/privkey.pem
+  base_url:        https://home.thegrebs.com
 
 mqtt:
   broker: core-mosquitto
