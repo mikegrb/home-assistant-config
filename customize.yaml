@@ -32,6 +32,8 @@ sensor.house_thermostat_hvac_state:
   hidden: true
 sensor.house_thermostat_operation_mode:
   hidden: true
+sensor.home_eta:
+  hidden: true
 sensor.heidi_grebs_iphone_battery_level:
   hidden: true
 sensor.heidi_grebs_iphone_battery_state:
