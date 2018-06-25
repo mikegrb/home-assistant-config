@@ -59,11 +59,13 @@ panel_iframe:
     title: Energy
     url: https://solar.thegrebs.com/
     icon: mdi:power-plug
+  grafana:
+    title: Grafana
+    url: https://home.thegrebs.com/grafana/dashboard/db/main
+    icon: mdi:speedometer
+
 weblink:
   entities:
-    - name: Grafana
-      url: http://192.168.86.105:3003/dashboard/db/main
-      icon: mdi:speedometer
     - name: Configurator
       icon: mdi:wrench
       url: http://hassio.local:3218
