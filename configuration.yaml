@@ -195,10 +195,6 @@ notify:
 juicenet:
   access_token: !secret juicenet_api_key
 
-neato:
-  username: michael@thegrebs.com
-  password: !secret neato_pass
-
 zone:
   - name: School
     latitude: 39.487062
