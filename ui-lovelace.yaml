@@ -1,0 +1,107 @@
+name: Home
+views:
+  - name: Home
+    cards:
+    - type: entity-filter
+      filter:
+        - domain: device_tracker
+          state: 'home'
+      card: glance
+      card_config:
+        title: People at home
+    - type: weather-forecast
+      entity: weather.dark_sky
+
+  - tab_icon: mdi:floor-plan
+    name: Rooms
+    cards:
+      - type: entities
+        title: Kitchen
+        entities:
+          - switch.on_air
+          - light.kitchen
+          - light.kitchen_table
+          - light.kitchen_accent
+          - switch.fountain
+          - sensor.kitchen_zw100_temperature
+          - sensor.kitchen_zw100_relative_humidity
+          - sensor.kitchen_zw100_luminance
+          - binary_sensor.sensor
+      - type: entities
+        title: Den
+        entities:
+          - light.den
+          - fan.den
+          - switch.bird
+          - sensor.den_relay_humidity
+          - sensor.den_relay_temperature
+          - media_player.family_room_speaker
+      - type: entities
+        title: Front Room
+        entities:
+          - light.front_room
+          - light.fr1
+          - light.fr2
+      - type: entities
+        title: Office
+        entities:
+          - light.office
+      - type: entities
+        title: Master Bedroom
+        entities:
+          - light.master_bedroom
+          - fan.master_bedroom
+      - type: entities
+        title: Lounge
+        entities:
+          - light.lounge
+      - type: entities
+        title: Laundry
+        entities:
+          - sensor.washer
+          - sensor.dryer
+      - type: entities
+        title: Halls
+        entities:
+          - light.downstairs_hall
+          - light.upstairs_hall
+
+  - tab_icon: mdi:cctv
+    name: Cameras
+    cards:
+      - type: camera-preview
+        entity: camera.driveway
+      - type: camera-preview
+        entity: camera.front_door
+      - type: camera-preview
+        entity: camera.stairs
+      - type: camera-preview
+        entity: camera.kitchen
+      - type: camera-preview
+        entity: camera.den
+      - type: camera-preview
+        entity: camera.office
+      - type: camera-preview
+        entity: camera.octoprint
+
+  - tab_icon: mdi:auto-fix
+    name: Automation
+    cards:
+      - type: entity-filter
+        filter:
+          - domain: automation
+        card_config:
+          title: Automations
+      - type: entity-filter
+        filter:
+          - domain: script
+        card_config:
+          title: Scripts
+
+  - tab_icon: mdi:settings
+    name: Debugging
+    cards:
+      - type: entity-filter
+        filter: [{}]
+        card_config:
+          title: All entities

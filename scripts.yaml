@@ -1,4 +1,5 @@
 fix_hall_light:
+  alias: Fix Hall Light
   sequence:
     # This is written using the Script Syntax
     - service: light.turn_on

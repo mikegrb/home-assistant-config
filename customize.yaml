@@ -18,6 +18,8 @@ sensor.alarm_type:
   hidden: true
 binary_sensor.sensor:
   device_class: motion
+sensor.home_security_state:
+  hidden: true
 binary_sensor.house_thermostat_is_using_emergency_heat:
   hidden: true
 binary_sensor.house_thermostat_online:
