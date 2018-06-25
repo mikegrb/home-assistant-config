@@ -77,6 +77,10 @@ climate:
     username: michael@thegrebs.com
     password: !secret nest_password
 
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
 sensor:
   - platform: ted5000
     name: main
