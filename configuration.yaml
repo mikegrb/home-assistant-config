@@ -135,6 +135,11 @@ sensor:
     monitored_conditions:
       - Current State
       - Job Percentage
+  - platform: mqtt
+    state_topic: kitchen/fountain/level
+    name: Fountain Water Level
+    unit_of_measurement: mm
+    force_update: true
 
 ring:
   username: michael@thegrebs.com
