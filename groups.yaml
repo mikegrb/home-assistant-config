@@ -53,6 +53,7 @@ front_room:
 Office:
   entities:
     - light.office
+    - switch.office_tv
     - switch.scanner
 
 Master Bedroom:

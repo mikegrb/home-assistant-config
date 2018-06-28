@@ -171,6 +171,16 @@ sabnzbd:
 #    device: 0
 #    debug: 0
 
+switch:
+  - platform: command_line
+    switches:
+      office_tv:
+        friendly_name: Office TV
+        command_on: 'curl -X POST http://192.168.86.223:8060/keypress/PowerOn'
+        command_off: 'curl -X POST http://192.168.86.223:8060/keypress/PowerOff'
+        command_state: 'curl -s GET http://192.168.86.223:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
+        value_template: '{{ value == "ON" }}'
+
 camera:
   - platform: ring
   - platform: generic
