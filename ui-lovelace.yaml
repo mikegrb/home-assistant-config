@@ -10,8 +10,16 @@ views:
       card_config:
         title: People at home
     - type: weather-forecast
-      entity: weather.dark_sky
-
+      title: Weather
+      entity: weather.yweather
+    - type: entity-filter
+      filter:
+        - domain: light
+          state: 'on'
+        - domain: switch
+          state: 'on'
+          card_config:
+            title: 'On'
   - tab_icon: mdi:floor-plan
     name: Rooms
     cards:

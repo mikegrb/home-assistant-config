@@ -80,8 +80,7 @@ climate:
     password: !secret nest_password
 
 weather:
-  - platform: darksky
-    api_key: !secret darksky_api_key
+  - platform: yweather
 
 sensor:
   - platform: ted5000
