@@ -26,7 +26,7 @@ kitchen:
     - light.kitchen
     - light.kitchen_table
     - light.kitchen_accent
-    - switch.fountain
+    - sensor.fountain_water_level
     - sensor.kitchen_zw100_temperature
     - sensor.kitchen_zw100_relative_humidity
     - sensor.kitchen_zw100_luminance
@@ -53,6 +53,7 @@ front_room:
 Office:
   entities:
     - light.office
+    - switch.scanner
 
 Master Bedroom:
   entities:

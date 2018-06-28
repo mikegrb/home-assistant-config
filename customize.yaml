@@ -131,38 +131,42 @@ fan.master_bedroom:
   icon: mdi:fan
 sensor.kitchen_zw100_relative_humidity:
   icon: mdi:water-percent
-switch.fountain:
-  icon: mdi:fountain
+switch.scanner:
+  icon: mdi:radio-handheld
 light.front_room:
   icon: mdi:floor-lamp
+switch.bird:
+  icon: mdi:twitter
+switch.office_tv:
+  icon: mdi:television-classic
 
-sensor.fountain_current:
+sensor.scanner_current:
   hidden: true
-sensor.fountain_exporting:
+sensor.scanner_exporting:
   hidden: true
-sensor.fountain_interval:
+sensor.scanner_interval:
   hidden: true
-sensor.fountain_interval_2:
+sensor.scanner_interval_2:
   hidden: true
-sensor.fountain_interval_3:
+sensor.scanner_interval_3:
   hidden: true
-sensor.fountain_interval_4:
+sensor.scanner_interval_4:
   hidden: true
-sensor.fountain_power:
+sensor.scanner_power:
   hidden: true
-sensor.fountain_power_management:
+sensor.scanner_power_management:
   hidden: true
-sensor.fountain_previous_reading:
+sensor.scanner_previous_reading:
   hidden: true
-sensor.fountain_previous_reading_2:
+sensor.scanner_previous_reading_2:
   hidden: true
-sensor.fountain_previous_reading_3:
+sensor.scanner_previous_reading_3:
   hidden: true
-sensor.fountain_previous_reading_4:
+sensor.scanner_previous_reading_4:
   hidden: true
-sensor.fountain_sourcenodeid:
+sensor.scanner_sourcenodeid:
   hidden: true
-sensor.fountain_voltage:
+sensor.scanner_voltage:
   hidden: true
 sensor.alarm_type_2:
   hidden: true

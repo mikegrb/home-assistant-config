@@ -174,11 +174,11 @@ zwave.aeotec_zw100_multisensor_6:
   name: Kitchen ZW100
   platform: zwave
   unique_id: node-2
-switch.fountain:
-  name: Fountain
+switch.scanner:
+  name: Scanner
   platform: zwave
   unique_id: 4-72057594109837312
-zwave.fountain:
+zwave.scanner:
   name:
   platform: zwave
   unique_id: node-4
@@ -194,59 +194,59 @@ sensor.unknown_2:
   name:
   platform: zwave
   unique_id: 4-72057594110050306
-sensor.fountain_power:
+sensor.scanner_power:
   name:
   platform: zwave
   unique_id: 4-72057594110050434
-sensor.fountain_voltage:
+sensor.scanner_voltage:
   name:
   platform: zwave
   unique_id: 4-72057594110050562
-sensor.fountain_current:
+sensor.scanner_current:
   name:
   platform: zwave
   unique_id: 4-72057594110050626
-sensor.fountain_exporting:
+sensor.scanner_exporting:
   name:
   platform: zwave
   unique_id: 4-72057594110050816
-sensor.fountain_sourcenodeid:
+sensor.scanner_sourcenodeid:
   name:
   platform: zwave
   unique_id: 4-72057594111082529
-sensor.fountain_power_management:
+sensor.scanner_power_management:
   name:
   platform: zwave
   unique_id: 4-72057594111082673
-sensor.fountain_previous_reading:
+sensor.scanner_previous_reading:
   name:
   platform: zwave
   unique_id: 4-72057594110050322
-sensor.fountain_interval:
+sensor.scanner_interval:
   name:
   platform: zwave
   unique_id: 4-72057594110050339
-sensor.fountain_previous_reading_2:
+sensor.scanner_previous_reading_2:
   name:
   platform: zwave
   unique_id: 4-72057594110050450
-sensor.fountain_interval_2:
+sensor.scanner_interval_2:
   name:
   platform: zwave
   unique_id: 4-72057594110050467
-sensor.fountain_previous_reading_3:
+sensor.scanner_previous_reading_3:
   name:
   platform: zwave
   unique_id: 4-72057594110050578
-sensor.fountain_interval_3:
+sensor.scanner_interval_3:
   name:
   platform: zwave
   unique_id: 4-72057594110050595
-sensor.fountain_previous_reading_4:
+sensor.scanner_previous_reading_4:
   name:
   platform: zwave
   unique_id: 4-72057594110050642
-sensor.fountain_interval_4:
+sensor.scanner_interval_4:
   name:
   platform: zwave
   unique_id: 4-72057594110050659

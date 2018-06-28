@@ -46,6 +46,7 @@ views:
         title: Office
         entities:
           - light.office
+          - switch.scanner
       - type: entities
         title: Master Bedroom
         entities:
