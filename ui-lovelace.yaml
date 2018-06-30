@@ -75,6 +75,11 @@ views:
         entities:
           - light.downstairs_hall
           - light.upstairs_hall
+      - type: entities
+        title: Garage
+        entities:
+          - cover.garage
+          - sensor.garage
 
   - tab_icon: mdi:cctv
     name: Cameras

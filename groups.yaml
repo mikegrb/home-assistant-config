@@ -75,6 +75,11 @@ Halls:
     - light.downstairs_hall
     - light.upstairs_hall
 
+Garage:
+  entities:
+    - cover.garage
+    - sensor.garage
+
 All Inside:
   entities:
     - switch.on_air

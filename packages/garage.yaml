@@ -1,0 +1,11 @@
+cover:
+  - platform: mqtt
+    name: Garage
+    command_topic: garage/door/cmd
+sensor:
+  - platform: template
+    sensors:
+      garage:
+        friendly_name: Garage Status
+        icon_template: mdi:garage
+        value_template: "{{ states.cover.garage.state }}"
