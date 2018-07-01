@@ -1,0 +1,7 @@
+sensor:
+  - platform: mqtt
+    state_topic: kitchen/fountain/level
+    name: Fountain Water Level
+    unit_of_measurement: mm
+    force_update: true
+    availability_topic: kitchen/fountain/available
