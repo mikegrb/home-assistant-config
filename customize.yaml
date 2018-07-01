@@ -139,6 +139,8 @@ switch.bird:
   icon: mdi:twitter
 switch.office_tv:
   icon: mdi:television-classic
+switch.tjs_desk_lamp:
+  icon: mdi:desk-lamp
 
 sensor.scanner_current:
   hidden: true

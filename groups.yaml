@@ -65,6 +65,11 @@ Lounge:
   entities:
     - light.lounge
 
+tjs_room:
+  name: TJ's Room
+  entities:
+    - switch.tjs_desk_lamp
+
 Laundry:
   entities:
     - sensor.washer
