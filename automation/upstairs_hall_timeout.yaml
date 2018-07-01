@@ -10,3 +10,6 @@
         data:
           entity_id:
             - light.upstairs_hall
+      - service: notify.twitter
+        data:
+          message: Someone left the upstairs hall light on.

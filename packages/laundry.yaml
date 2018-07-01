@@ -12,7 +12,7 @@ sensor:
         friendly_name: Dryer
         entity_id: sensor.dryer_current
         value_template: >-
-          {% if states.sensor.dryer_current.state|float < 2 %}
+          {% if states.sensor.dryer_current.state|float < 0.1 %}
             Idle
           {% else %}
             Running
@@ -43,6 +43,9 @@ automation:
       - service: notify.all
         data:
           message: The dryer is done.
+      - service: notify.twitter
+        data:
+          message: The dryer is done.
   - alias: Washer Done
     trigger:
       - platform: state
@@ -59,3 +62,7 @@ automation:
       - service: notify.all
         data:
           message: The washer is done.
+      - service: notify.twitter
+        data:
+          message: The washer is done.
+
