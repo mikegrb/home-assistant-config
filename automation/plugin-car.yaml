@@ -21,6 +21,6 @@
       data:
         entity_id: media_player.family_room_speaker
         message: The car is not plugged in.
-    - service: notify.all
+    - service: notify.all_t
       data:
         message: The car is not plugged in.
