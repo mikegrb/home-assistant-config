@@ -1,0 +1,3 @@
+cmd: rsync -rlzvP --exclude=".git" ~/hass/config/ /Volumes/config/
+name: push
+sh: true

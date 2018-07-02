@@ -212,17 +212,23 @@ tts:
   - platform: google
 
 notify:
-  - name: all
-    platform: group
-    services:
-      - service: ios_michaels_iphone
-      - service: ios_heidi_grebs_iphone
   - name: twitter
     platform: twitter
     consumer_key: !secret twitter_consumer_key
     consumer_secret: !secret twitter_consumer_secret
     access_token: !secret twitter_access_token
     access_token_secret: !secret twitter_access_token_secret
+  - name: all
+    platform: group
+    services:
+      - service: ios_michaels_iphone
+      - service: ios_heidi_grebs_iphone
+  - name: all_t
+    platform: group
+    services:
+      - service: ios_michaels_iphone
+      - service: ios_heidi_grebs_iphone
+      - service: twitter
 
 juicenet:
   access_token: !secret juicenet_api_key
