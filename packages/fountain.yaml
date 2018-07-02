@@ -5,3 +5,42 @@ sensor:
     unit_of_measurement: mm
     force_update: true
     availability_topic: kitchen/fountain/available
+
+automation:
+  - alias: 'Fountain Water Level Evening'
+    trigger:
+      platform: time
+      at: '18:29:00'
+    condition:
+      condition: numeric_state
+      entity_id: sensor.fountain_water_level
+      below: 900
+    action:
+      - service: tts.google_say
+        data:
+          entity_id: media_player.family_room_speaker
+          message: The fountain is low on water.
+      - service: notify.all_t
+        data:
+          message: The fountain is low on water.
+
+  - alias: 'Fountain Water Level'
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.fountain_water_level
+      below: 900
+    action:
+      - service: tts.google_say
+        data:
+          entity_id: media_player.family_room_speaker
+          message: The fountain is low on water.
+      - service: notify.all_t
+        data:
+          message: The fountain is low on water.
+      - service: automation.turn_off
+        data:
+          entity_id: automation.fountain_water_level
+      - delay: '06:00:00'
+      - service: automation.turn_on
+        data:
+          entity_id: automation.fountain_water_level
