@@ -135,10 +135,6 @@ sensor:
       - Current State
       - Job Percentage
 
-ring:
-  username: michael@thegrebs.com
-  password: !secret ring_password
-
 apple_tv:
   # Living Room
   - host: 192.168.86.208
@@ -187,7 +183,6 @@ switch:
     retain: false
 
 camera:
-  - platform: ring
   - platform: generic
     name: Mike
     still_image_url: https://maps.googleapis.com/maps/api/staticmap?center={{ states.device_tracker.michaels_iphone.attributes.latitude }},{{ states.device_tracker.michaels_iphone.attributes.longitude }}&zoom=13&size=500x500&maptype=roadmap&markers=color:blue%7Clabel:P%7C{{ states.device_tracker.michaels_iphone.attributes.latitude }},{{ states.device_tracker.michaels_iphone.attributes.longitude }}

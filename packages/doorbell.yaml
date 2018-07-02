@@ -1,0 +1,24 @@
+ring:
+  username: michael@thegrebs.com
+  password: !secret ring_password
+
+camera:
+  - platform: ring
+
+binary_sensor:
+  - platform: ring
+
+automation:
+  - alias: Doorbell
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.ring_front_door_ding
+        to: 'on'
+    action:
+      - service: tts.google_say
+        data:
+          entity_id: media_player.family_room_speaker
+          message: Someone is at the door.
+      - service: notify.all_t
+        data:
+          message: Someone rang the doorbell.
