@@ -13,6 +13,7 @@ automation:
     trigger:
       - platform: state
         entity_id: binary_sensor.ring_front_door_ding
+        from: 'off'
         to: 'on'
     action:
       - service: tts.google_say

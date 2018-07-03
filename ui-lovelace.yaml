@@ -20,6 +20,18 @@ views:
           state: 'on'
           card_config:
             title: 'On'
+    - type: glance
+      title: Kitchen
+      entities:
+        - switch.on_air
+        - light.kitchen
+        - light.kitchen_table
+        - light.kitchen_accent
+        - sensor.fountain_water_level
+        - sensor.kitchen_zw100_temperature
+        - sensor.kitchen_zw100_relative_humidity
+        - sensor.kitchen_zw100_luminance
+        - binary_sensor.sensor
   - tab_icon: mdi:floor-plan
     name: Rooms
     cards:
@@ -65,6 +77,10 @@ views:
         title: Lounge
         entities:
           - light.lounge
+      - type: entities
+        title: TJ's Room
+        entities:
+          - switch.tjs_desk_lamp
       - type: entities
         title: Laundry
         entities:
