@@ -1,11 +1,52 @@
+homeassistant:
+  customize:
+    sensor.garage_door_sourcenodeid:
+      hidden: true
+    sensor.garage_door_burglar:
+      hidden: true
+    binary_sensor.garage_door_sensor:
+      hidden: true
+    sensor.garage_door_alarm_type:
+      hidden: true
+    sensor.garage_door_alarm_level:
+      hidden: true
+
 cover:
   - platform: mqtt
     name: Garage
     command_topic: garage/door/cmd
+
 sensor:
   - platform: template
     sensors:
       garage:
         friendly_name: Garage Status
-        icon_template: mdi:garage
-        value_template: "{{ states.cover.garage.state }}"
+        value_template: >-
+          {% if is_state('binary_sensor.garage_door_sensor', 'on') %}
+          Open
+          {% else %}
+          Closed
+          {% endif %}
+        icon_template: >-
+          {% if is_state('binary_sensor.garage_door_sensor', 'on') %}
+          mdi:garage-open
+          {% else %}
+          mdi:garage
+          {% endif %}
+
+automation:
+    - alias: Garage Door 1 hr
+      trigger:
+        platform: state
+        entity_id: binary_sensor.garage_door_sensor
+        to: 'on'
+        for:
+          hours: 1
+      action:
+        - service: notify.all
+          data:
+            message: The garage door has been open for 1 hr.
+        - service: tts.google_say
+          data:
+            entity_id: media_player.family_room_speaker
+            message: The garage door has been open for 1 hr.
