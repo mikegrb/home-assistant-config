@@ -1,3 +1,12 @@
+homeassistant:
+  customize:
+    binary_sensor.ring_front_door_ding:
+      hidden: true
+    binary_sensor.ring_front_door_motion:
+      hidden: true
+    binary_sensor.ring_driveway_motion:
+      hidden: true
+
 ring:
   username: michael@thegrebs.com
   password: !secret ring_password

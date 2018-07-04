@@ -36,6 +36,8 @@ sensor.house_thermostat_operation_mode:
   hidden: true
 sensor.home_eta:
   hidden: true
+binary_sensor.home_away:
+  hidden: true
 sensor.heidi_grebs_iphone_battery_level:
   hidden: true
 sensor.heidi_grebs_iphone_battery_state:
