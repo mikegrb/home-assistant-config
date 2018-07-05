@@ -1,25 +1,42 @@
+resources:
+  - url: /local/monster-card.js
+    type: js
 name: Home
 views:
-  - name: Home
+  - title: Home
     cards:
     - type: entity-filter
-      filter:
-        - domain: device_tracker
-          state: 'home'
-      card: glance
-      card_config:
+      entities:
+        - device_tracker.michaels_iphone
+        - device_tracker.heidi_grebs_iphone
+      state_filter:
+        -  'home'
+      card:
+        type: glance
         title: People at home
     - type: weather-forecast
       title: Weather
       entity: weather.yweather
-    - type: entity-filter
+    - type: custom:monster-card
+      card:
+        type: entities
+        title: "On"
       filter:
-        - domain: light
-          state: 'on'
-        - domain: switch
-          state: 'on'
-          card_config:
-            title: 'On'
+        include:
+          - domain: light
+            state: 'on'
+          - domain: switch
+            state: 'on'
+        exclude:
+          - entity_id: "*undercounter*"
+          - entity_id: light.hue_lightstrip_plus_1
+          - entity_id: switch.outside_front
+          - entity_id: switch.outside_lights
+          - entity_id: switch.dryer_switch
+          - entity_id: switch.washer_switch
+          - entity_id: switch.bird
+          - entity_id: switch.scanner
+
     - type: glance
       title: Kitchen
       entities:
@@ -33,7 +50,7 @@ views:
         - sensor.kitchen_zw100_luminance
         - binary_sensor.sensor
   - tab_icon: mdi:floor-plan
-    name: Rooms
+    title: Rooms
     cards:
       - type: entities
         title: Kitchen
@@ -98,41 +115,37 @@ views:
           - sensor.garage
 
   - tab_icon: mdi:cctv
-    name: Cameras
+    title: Cameras
     cards:
-      - type: camera-preview
+      - type: picture-entity
         entity: camera.driveway
-      - type: camera-preview
+      - type: picture-entity
         entity: camera.front_door
-      - type: camera-preview
+      - type: picture-entity
         entity: camera.stairs
-      - type: camera-preview
+      - type: picture-entity
         entity: camera.kitchen
-      - type: camera-preview
+      - type: picture-entity
         entity: camera.den
-      - type: camera-preview
+      - type: picture-entity
         entity: camera.office
-      - type: camera-preview
+      - type: picture-entity
         entity: camera.octoprint
 
   - tab_icon: mdi:auto-fix
-    name: Automation
+    title: Automation
     cards:
-      - type: entity-filter
+      - type: custom:monster-card
         filter:
-          - domain: automation
-        card_config:
+          include:
+            - domain: automation
+        card:
           title: Automations
-      - type: entity-filter
+          type: entities
+      - type: custom:monster-card
         filter:
-          - domain: script
-        card_config:
+          include:
+            - domain: script
+        card:
           title: Scripts
-
-  - tab_icon: mdi:settings
-    name: Debugging
-    cards:
-      - type: entity-filter
-        filter: [{}]
-        card_config:
-          title: All entities
+          type: entities
