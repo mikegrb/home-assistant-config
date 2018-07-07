@@ -45,6 +45,7 @@ views:
         - light.kitchen_table
         - light.kitchen_accent
         - sensor.fountain_water_level
+        - sensor.fountain_fill
         - sensor.kitchen_zw100_temperature
         - sensor.kitchen_zw100_relative_humidity
         - sensor.kitchen_zw100_luminance
@@ -59,7 +60,8 @@ views:
           - light.kitchen
           - light.kitchen_table
           - light.kitchen_accent
-          - switch.fountain
+          - sensor.fountain_water_level
+          - sensor.fountain_fill
           - sensor.kitchen_zw100_temperature
           - sensor.kitchen_zw100_relative_humidity
           - sensor.kitchen_zw100_luminance

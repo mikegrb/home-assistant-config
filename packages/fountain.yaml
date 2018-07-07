@@ -5,6 +5,15 @@ sensor:
     unit_of_measurement: mm
     force_update: true
     availability_topic: kitchen/fountain/available
+    icon: mdi:fountain
+  - platform: template
+    sensors:
+      fountain_fill:
+        friendly_name: Fountain Fill
+        entity_id: sensor.fountain_water_level
+        unit_of_measurement: "%"
+        value_template: "{{ ((float(states.sensor.fountain_water_level.state) - 895) / 305 * 100) | round(0) }}"
+        icon_template: mdi:fountain
 
 automation:
   - alias: 'Fountain Water Level Evening'
