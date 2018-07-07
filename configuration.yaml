@@ -149,10 +149,6 @@ octoprint:
   host:    192.168.86.120
   api_key: !secret octoprint_api_key
 
-sabnzbd:
-  host: 192.168.86.105
-  api_key: !secret sabnzb_key
-
 #media_player:
 #  - platform: tivo
 #    host: 192.168.86.215
