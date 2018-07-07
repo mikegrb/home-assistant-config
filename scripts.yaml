@@ -20,3 +20,29 @@ sleep_imac:
     data:
       topic:   host/impro
       payload: sleep
+notify_tts:
+  sequence:
+    - service: media_player.alexa_tts
+      data_template:
+        entity_id: group.alexas
+        message: "{{ message }}"
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.family_room_speaker
+        message: "{{ message }}"
+notify_tts_all_t:
+  sequence:
+    - service: notify.all_t
+      data_template:
+        message: "{{ message }}"
+    - service: script.notify_tts
+      data_template:
+        message: "{{ message }}"
+notify_tts_all:
+  sequence:
+    - service: notify.all
+      data_template:
+        message: "{{ message }}"
+    - service: script.notify_tts
+      data_template:
+        message: "{{ message }}"

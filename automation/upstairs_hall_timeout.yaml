@@ -10,6 +10,9 @@
         data:
           entity_id:
             - light.upstairs_hall
+      - service: script.notify_tts
+        data:
+          message: Someone left the upstairs hall light on
       - service: notify.twitter
         data:
           message: Someone left the upstairs hall light on.

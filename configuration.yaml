@@ -161,6 +161,9 @@ sabnzbd:
 #    device: 0
 #    debug: 0
 
+media_player:
+  - platform: alexa
+
 switch:
   - platform: command_line
     switches:
