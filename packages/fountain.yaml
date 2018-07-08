@@ -25,11 +25,7 @@ automation:
       entity_id: sensor.fountain_water_level
       below: 900
     action:
-      - service: tts.google_say
-        data:
-          entity_id: media_player.family_room_speaker
-          message: The fountain is low on water.
-      - service: notify.all_t
+      - service: script.notify_tts_all_t
         data:
           message: The fountain is low on water.
 
@@ -39,11 +35,7 @@ automation:
       entity_id: sensor.fountain_water_level
       below: 900
     action:
-      - service: tts.google_say
-        data:
-          entity_id: media_player.family_room_speaker
-          message: The fountain is low on water.
-      - service: notify.all_t
+      - service: script.notify_tts_all_t
         data:
           message: The fountain is low on water.
       - service: automation.turn_off
