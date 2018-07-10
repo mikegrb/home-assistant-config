@@ -96,6 +96,7 @@ views:
         title: Lounge
         entities:
           - light.lounge
+          - switch.lounge_fan
       - type: entities
         title: TJ's Room
         entities:

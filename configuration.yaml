@@ -134,6 +134,9 @@ sensor:
     monitored_conditions:
       - Current State
       - Job Percentage
+  - platform: google_wifi
+    monitored_conditions:
+      - status
 
 apple_tv:
   # Living Room
@@ -174,6 +177,17 @@ switch:
     state_topic: "stat/tjs_desk/POWER"
     command_topic: "cmnd/tjs_desk/POWER"
     availability_topic: "tele/tjs_desk/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+  - platform: mqtt
+    name: "Lounge Fan"
+    state_topic: "stat/lounge/fan/POWER"
+    command_topic: "cmnd/lounge/fan/POWER"
+    availability_topic: "tele/lounge/fan/LWT"
     qos: 1
     payload_on: "ON"
     payload_off: "OFF"

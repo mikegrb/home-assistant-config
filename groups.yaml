@@ -65,6 +65,7 @@ Master Bedroom:
 Lounge:
   entities:
     - light.lounge
+    - switch.lounge_fan
 
 tjs_room:
   name: TJ's Room
