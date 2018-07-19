@@ -1,12 +1,18 @@
 - alias: 'Kitchen Accent Motion Trigger'
   trigger:
     platform: state
-    entity_id: binary_sensor.sensor
+    entity_id: binary_sensor.kitchen_zw100_sensor
     to: 'on'
   condition:
-    condition: numeric_state
-    entity_id: sensor.kitchen_zw100_luminance
-    below: 5
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sensor.kitchen_zw100_luminance
+        below: 5
+      - condition: state
+        entity_id: sun.sun
+        state: below_horizon
+
   action:
     - service: homeassistant.turn_on
       data:
@@ -32,4 +38,3 @@
       entity_id:
         - light.kitchen_accent
         - input_boolean.kitchen_accent_motion_triggered
-

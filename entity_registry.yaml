@@ -168,56 +168,6 @@ zwave.aeotec_zw090_zstick_gen5_us:
   name:
   platform: zwave
   unique_id: node-1
-sensor.alarm_type:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594077528065
-sensor.alarm_level:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594077528081
-binary_sensor.sensor:
-  config_entry_id:
-  name: Kitchen Motion
-  platform: zwave
-  unique_id: 2-72057594076463104
-sensor.kitchen_zw100_temperature:
-  config_entry_id:
-  name: Kitchen Temperature
-  platform: zwave
-  unique_id: 2-72057594076479506
-sensor.kitchen_zw100_luminance:
-  config_entry_id:
-  name: Kitchen Luminance
-  platform: zwave
-  unique_id: 2-72057594076479538
-sensor.kitchen_zw100_relative_humidity:
-  config_entry_id:
-  name: Kitchen Humidity
-  platform: zwave
-  unique_id: 2-72057594076479570
-sensor.kitchen_zw100_ultraviolet:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594076479922
-sensor.kitchen_zw100_sourcenodeid:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594077528097
-sensor.kitchen_zw100_burglar:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594077528225
-zwave.aeotec_zw100_multisensor_6:
-  config_entry_id:
-  name: Kitchen ZW100
-  platform: zwave
-  unique_id: node-2
 switch.scanner:
   config_entry_id:
   name: Scanner
@@ -678,3 +628,128 @@ sensor.garage_door_alarm_level:
   name:
   platform: zwave
   unique_id: 16-72057594312409105
+media_player.master_bedroom:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G070RQ1180550DQH
+media_player.downstairs:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 8df24d9e4a404bd68f89ea64398a7608
+media_player.hunters_room:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G090LF0964321B94
+media_player.michaels_virtual_device:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 033c22827f424a65a5ee0af5c6712cfc
+media_player.office_4:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G070RR10801404B7
+media_player.tjs_tablet:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G0W0KH02651415CT
+media_player.tjs_room:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G090LF09642207KK
+media_player.heidis_alexa_apps:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 4CE6310533744FAAB19A944B97078F50
+media_player.michaels_alexa_apps:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: A1000017CCD81E
+media_player.front_room:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G090LF0964320MML
+media_player.hunters_tablet:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G0W0KJ0265310W78
+media_player.kitchen:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G000MW0672750H86
+media_player.living_room:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G090LF09638606DL
+media_player.lounge:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G070RQ1180550E1D
+media_player.my_dash:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G030K50870827835
+sensor.kitchen_zw100_temperature:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594328137746
+sensor.kitchen_zw100_luminance:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594328137778
+sensor.kitchen_zw100_relative_humidity:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594328137810
+sensor.kitchen_zw100_ultraviolet:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594328138162
+sensor.kitchen_zw100_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186337
+sensor.kitchen_zw100_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186465
+zwave.kitchen_zw100:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-17
+binary_sensor.kitchen_zw100_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594328121344
+sensor.kitchen_zw100_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186305
+sensor.kitchen_zw100_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186321

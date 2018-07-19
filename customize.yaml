@@ -12,9 +12,9 @@ light.undercounter_west_2:
   hidden: true
 climate.home_house_thermostat:
   hidden: true
-sensor.alarm_level:
+sensor.kitchen_zw100_alarm_level:
   hidden: true
-sensor.alarm_type:
+sensor.kitchen_zw100_alarm_type:
   hidden: true
 binary_sensor.sensor:
   device_class: motion

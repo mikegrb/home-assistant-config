@@ -1,3 +1,4 @@
-cmd: rsync -rlzvP --exclude=".git" ~/hass/config/ /Volumes/config/
+cmd: rsync -rlzvP --exclude=".git" ~/hass/config/ root@192.168.86.124:/usr/share/hassio/homeassistant
+# cmd: rsync -rlzvP --exclude=".git" ~/hass/config/ /Volumes/config/
 name: push
 sh: true
