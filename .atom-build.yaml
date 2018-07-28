@@ -2,3 +2,7 @@ cmd: rsync -rlzvP --exclude=".git" ~/hass/config/ root@192.168.86.124:/usr/share
 # cmd: rsync -rlzvP --exclude=".git" ~/hass/config/ /Volumes/config/
 name: push
 sh: true
+
+targets:
+  getEntities:
+    cmd: scp root@hassio:/usr/share/hassio/homeassistant/entity_registry.yaml ~/hass/config/

@@ -31,7 +31,7 @@ http:
   api_password:    !secret http_password
   #  ssl_certificate: /ssl/fullchain.pem
   # ssl_key:         /ssl/privkey.pem
-  base_url:        https://home.thegrebs.com
+  base_url:        https://home.thegrebs.com:443
 
 mqtt:
   broker: core-mosquitto
@@ -64,12 +64,13 @@ panel_iframe:
     title: Grafana
     url: https://home.thegrebs.com/grafana/dashboard/db/main
     icon: mdi:speedometer
+  z_wave_graph:
+    title: 'Z-Wave Graph'
+    icon: mdi:vector-square
+    url: https://home.thegrebs.com/local/z-wave-graph.html
 
-weblink:
-  entities:
-    - name: Configurator
-      icon: mdi:wrench
-      url: http://hassio.local:3218
+shell_command:
+  z_wave_graph: /usr/local/bin/python3 /config/bin/z-wave-graph.py
 
 nest:
   client_id:     !secret nest_client_id
@@ -147,6 +148,14 @@ sensor:
   - platform: google_wifi
     monitored_conditions:
       - status
+  - platform: speedtest
+    minute: 30
+    hour:
+      - 6
+    monitored_conditions:
+      - ping
+      - download
+      - upload
 
 apple_tv:
   # Living Room
@@ -345,9 +354,12 @@ alexa:
 homekit:
   auto_start: False
   filter:
-    exclude_domains:
-      - remote
-      - sensor
+    include_domains:
+      - switch
+      - light
+      - fan
+      - lock
+      - climate
     exclude_entities:
       - group.kitchen
       - light.den_2
@@ -368,6 +380,7 @@ homekit:
       - light.downstairs
       - light.outside
       - light.upstairs
+      - climate.home_house_thermostat
 
 input_number:
   btc_limit:

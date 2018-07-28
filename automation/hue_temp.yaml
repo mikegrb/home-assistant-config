@@ -1,0 +1,15 @@
+  - alias: Office Default Daylight
+    trigger:
+      platform: state
+      entity_id: light.office_2
+      to: 'on'
+    condition:
+      - condition: numeric_state
+        entity_id: light.office_2
+        value_template: '{{ state.attributes.color_temp }}'
+        above: 360
+    action:
+      - service: light.turn_on
+        entity_id: light.office_2
+        data_template:
+          color_temp: 181

@@ -49,6 +49,7 @@ views:
         - sensor.kitchen_zw100_relative_humidity
         - sensor.kitchen_zw100_luminance
         - binary_sensor.sensor
+
   - tab_icon: mdi:floor-plan
     title: Rooms
     cards:
@@ -59,33 +60,29 @@ views:
           - light.kitchen
           - light.kitchen_table
           - light.kitchen_accent
-          - sensor.fountain_water_level
+          - switch.fountain
           - sensor.fountain_fill
           - sensor.kitchen_zw100_temperature
           - sensor.kitchen_zw100_relative_humidity
           - sensor.kitchen_zw100_luminance
-          - binary_sensor.sensor
+          - binary_sensor.kitchen_zw100_sensor
       - type: entities
         title: Den
         entities:
           - light.den
           - fan.den
-          - switch.bird
-          - sensor.den_relay_humidity
-          - sensor.den_relay_temperature
-          - media_player.family_room_speaker
+          # - media_player.family_room_speaker
       - type: entities
         title: Front Room
         entities:
           - light.front_room
-          - light.fr1
-          - light.fr2
       - type: entities
         title: Office
         entities:
           - light.office
           - switch.office_tv
           - switch.scanner
+          - switch.audio_mixer
       - type: entities
         title: Master Bedroom
         entities:

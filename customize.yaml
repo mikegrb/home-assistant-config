@@ -16,7 +16,7 @@ sensor.kitchen_zw100_alarm_level:
   hidden: true
 sensor.kitchen_zw100_alarm_type:
   hidden: true
-binary_sensor.sensor:
+binary_sensor.kitchen_zw100_sensor:
   device_class: motion
 sensor.home_security_state:
   hidden: true
@@ -141,6 +141,10 @@ switch.office_tv:
   icon: mdi:television-classic
 switch.tjs_desk_lamp:
   icon: mdi:desk-lamp
+switch.fountain:
+  icon: mdi:spotlight
+switch.audio_mixer:
+  icon: mdi:tune-vertical
 
 sensor.scanner_current:
   hidden: true
@@ -177,39 +181,39 @@ sensor.alarm_level_2:
 sensor.unknown_2:
   hidden: true
 
-sensor.bird_alarm_type:
+sensor.on_air_alarm_type:
   hidden: true
-sensor.bird_alarm_level:
+sensor.on_air_alarm_level:
   hidden: true
-sensor.bird:
+sensor.on_air:
   hidden: true
-sensor.bird_power:
+sensor.on_air_power:
   hidden: true
-sensor.bird_voltage:
+sensor.on_air_voltage:
   hidden: true
-sensor.bird_current:
+sensor.on_air_current:
   hidden: true
-sensor.bird_exporting:
+sensor.on_air_exporting:
   hidden: true
-sensor.bird_sourcenodeid:
+sensor.on_air_sourcenodeid:
   hidden: true
-sensor.bird_power_management:
+sensor.on_air_power_management:
   hidden: true
-sensor.bird_previous_reading:
+sensor.on_air_previous_reading:
   hidden: true
-sensor.bird_interval:
+sensor.on_air_interval:
   hidden: true
-sensor.bird_previous_reading_2:
+sensor.on_air_previous_reading_2:
   hidden: true
-sensor.bird_interval_2:
+sensor.on_air_interval_2:
   hidden: true
-sensor.bird_previous_reading_3:
+sensor.on_air_previous_reading_3:
   hidden: true
-sensor.bird_interval_3:
+sensor.on_air_interval_3:
   hidden: true
-sensor.bird_previous_reading_4:
+sensor.on_air_previous_reading_4:
   hidden: true
-sensor.bird_interval_4:
+sensor.on_air_interval_4:
   hidden: true
 
 sensor.washer_voltage:
@@ -297,3 +301,15 @@ sensor.front_door_lock_access_control:
 sensor.front_door_lock_power_management:
   hidden: true
 
+media_player.heidis_alexa_apps:
+  hidden: true
+media_player.hunters_tablet:
+  hidden: true
+media_player.michaels_alexa_apps:
+  hidden: true
+media_player.michaels_virtual_device:
+  hidden: true
+media_player.my_dash:
+  hidden: true
+media_player.tjs_tablet:
+  hidden: true

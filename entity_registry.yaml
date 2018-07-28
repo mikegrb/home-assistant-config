@@ -298,97 +298,97 @@ media_player.chrome_3:
   name:
   platform: plex
   unique_id: 1v3kumw63qgwrbpe2wyusqtg
-switch.bird:
+switch.on_air:
   config_entry_id:
-  name: Bird
+  name: On Air
   platform: zwave
   unique_id: 11-72057594227277824
-sensor.bird_alarm_type:
+sensor.on_air_alarm_type:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594228523009
-sensor.bird_alarm_level:
+sensor.on_air_alarm_level:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594228523025
-sensor.bird:
+sensor.on_air:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227490818
-sensor.bird_power:
+sensor.on_air_power:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227490946
-zwave.bird:
+zwave.on_air:
   config_entry_id:
   name:
   platform: zwave
   unique_id: node-11
-sensor.bird_voltage:
+sensor.on_air_voltage:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227491074
-sensor.bird_current:
+sensor.on_air_current:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227491138
-sensor.bird_exporting:
+sensor.on_air_exporting:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227491328
-sensor.bird_sourcenodeid:
+sensor.on_air_sourcenodeid:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594228523041
-sensor.bird_power_management:
+sensor.on_air_power_management:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594228523185
-sensor.bird_previous_reading:
+sensor.on_air_previous_reading:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227490834
-sensor.bird_interval:
+sensor.on_air_interval:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227490851
-sensor.bird_previous_reading_2:
+sensor.on_air_previous_reading_2:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227490962
-sensor.bird_interval_2:
+sensor.on_air_interval_2:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227490979
-sensor.bird_previous_reading_3:
+sensor.on_air_previous_reading_3:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227491090
-sensor.bird_interval_3:
+sensor.on_air_interval_3:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227491107
-sensor.bird_previous_reading_4:
+sensor.on_air_previous_reading_4:
   config_entry_id:
   name:
   platform: zwave
   unique_id: 11-72057594227491154
-sensor.bird_interval_4:
+sensor.on_air_interval_4:
   config_entry_id:
   name:
   platform: zwave
@@ -398,14 +398,14 @@ media_player.office_2:
   name:
   platform: roku
   unique_id: 2N002F753963
-zwave.on_air:
+zwave.fountain:
   config_entry_id:
-  name: On Air
+  name: Fountain Spot
   platform: zwave
   unique_id: node-12
-switch.on_air:
+switch.fountain:
   config_entry_id:
-  name: On Air
+  name: Fountain Spot
   platform: zwave
   unique_id: 12-72057594244055040
 sensor.dryer_power:

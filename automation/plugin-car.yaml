@@ -13,9 +13,6 @@
       - condition: state
         entity_id: device_tracker.michaels_iphone
         state: home
-      - condition: state
-        entity_id: device_tracker.heidi_grebs_iphone
-        state: home
   action:
     - service: tts.google_say
       data:
