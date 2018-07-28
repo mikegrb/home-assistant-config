@@ -753,3 +753,48 @@ sensor.kitchen_zw100_alarm_level:
   name:
   platform: zwave
   unique_id: 17-72057594329186321
+sensor.front_door_lock_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740737
+sensor.front_door_lock_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740753
+zwave.front_door_lock:
+  config_entry_id:
+  name: Front Door Lock
+  platform: zwave
+  unique_id: node-19
+lock.front_door_lock:
+  config_entry_id:
+  name: Front Door
+  platform: zwave
+  unique_id: 19-72057594362494976
+sensor.front_door_lock_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740769
+sensor.front_door_lock_access_control:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740881
+sensor.front_door_lock_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 19-72057594362740913
+media_player.unnamed_device_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: fcipwuu0a4oenrk9
+media_player.chrome_4:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: z5eq6s58o7g57ji6skr35750

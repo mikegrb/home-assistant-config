@@ -285,3 +285,15 @@ sensor.dryer_current:
   hidden: true
 sensor.dryer_power:
   hidden: true
+
+sensor.front_door_lock_alarm_type:
+  hidden: true
+sensor.front_door_lock_alarm_level:
+  hidden: true
+sensor.front_door_lock_sourcenodeid:
+  hidden: true
+sensor.front_door_lock_access_control:
+  hidden: true
+sensor.front_door_lock_power_management:
+  hidden: true
+

@@ -127,6 +127,15 @@ sensor:
           {% else %}
           0
           {% endif %}
+      front_door_status:
+        friendly_name: Front Door Status
+        entity_id: lock.front_door_lock
+        value_template: >-
+          {% set lock_status = states.lock.front_door_lock.attributes.lock_status %}
+          {% set lock_status = lock_status|replace('user 0', 'Master') %}
+          {% set lock_status = lock_status|replace('user 1', 'Kids') %}
+          {{ lock_status }}
+
   - platform: ups
     username: mikegrb
     password: !secret ups_password

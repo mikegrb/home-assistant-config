@@ -88,6 +88,12 @@ Garage:
     - cover.garage
     - sensor.garage
 
+Outside:
+  entities:
+    - switch.outside_back
+    - lock.front_door_lock
+    - sensor.front_door_status
+
 All Inside:
   entities:
     - switch.on_air
