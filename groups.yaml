@@ -39,7 +39,6 @@ den:
   entities:
     - light.den
     - fan.den
-    - switch.bird
     - sensor.den_relay_humidity
     - sensor.den_relay_temperature
     - media_player.family_room_speaker

@@ -34,7 +34,6 @@ views:
           - entity_id: switch.outside_lights
           - entity_id: switch.dryer_switch
           - entity_id: switch.washer_switch
-          - entity_id: switch.bird
           - entity_id: switch.scanner
 
     - type: glance
