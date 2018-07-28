@@ -25,7 +25,7 @@ automation:
         to: 'off'
       action:
       - service: fan.turn_off
-        entity_id: fan.master_bedroom_fan
+        entity_id: fan.master_bedroom
       - service: media_player.alexa_tts
         data:
           entity_id: media_player.master_bedroom

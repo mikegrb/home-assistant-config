@@ -16,6 +16,11 @@ config:
 recorder:
   db_url: !secret db_url
   purge_keep_days: 90
+  exclude:
+    domains:
+      - weather
+      - camera
+      - sun
 
 conversation:
 history:
@@ -270,19 +275,6 @@ zone:
     longitude: -74.515413
     radius: 300
     icon: mdi:school
-  - name: ShopRite
-    latitude: 39.462512
-    longitude: -74.495474
-    icon: mdi:cart
-  - name: BJs
-    latitude: 39.4512411
-    longitude: -74.6286195
-    icon: mdi:cart
-  - name: Simkins
-    latitude: 39.487560
-    longitude: -74.462958
-    radius: 70
-    icon: mdi:karate
 
 cloud:
   alexa:
