@@ -274,6 +274,7 @@ cloud:
         - light
         - fan
         - script
+        - input_boolean
       exclude_entities:
         - light.den_2
         - light.den_3

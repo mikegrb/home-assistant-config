@@ -8,11 +8,10 @@
     conditions:
       - condition: numeric_state
         entity_id: sensor.kitchen_zw100_luminance
-        below: 5
+        below: 1
       - condition: state
-        entity_id: sun.sun
-        state: below_horizon
-
+        entity_id: input_boolean.in_bed
+        state: "off"
   action:
     - service: homeassistant.turn_on
       data:

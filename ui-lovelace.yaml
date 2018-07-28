@@ -91,6 +91,7 @@ views:
         entities:
           - light.master_bedroom
           - fan.master_bedroom
+          - input_boolean.in_bed
       - type: entities
         title: Lounge
         entities:

@@ -1,0 +1,32 @@
+input_boolean:
+  in_bed:
+    name: In Bed
+    initial: off
+    icon: mdi:bed-empty
+
+automation:
+    - alias: Good Night
+      trigger:
+        platform: state
+        entity_id: input_boolean.in_bed
+        to: 'on'
+      action:
+        - service: media_player.alexa_tts
+          data:
+            entity_id: media_player.master_bedroom
+            message: Good Night
+        - service: homeassistant.turn_off
+          entity_id: group.all_inside
+
+    - alias: Good Morning
+      trigger:
+        platform: state
+        entity_id: input_boolean.in_bed
+        to: 'off'
+      action:
+      - service: fan.turn_off
+        entity_id: fan.master_bedroom_fan
+      - service: media_player.alexa_tts
+        data:
+          entity_id: media_player.master_bedroom
+          message: Good Morning

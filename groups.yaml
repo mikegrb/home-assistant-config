@@ -55,11 +55,13 @@ Office:
     - light.office
     - switch.office_tv
     - switch.scanner
+    - switch.audio_mixer
 
 Master Bedroom:
   entities:
     - light.master_bedroom
     - fan.master_bedroom
+    - input_boolean.in_bed
 
 Lounge:
   entities:
