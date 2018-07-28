@@ -13,13 +13,17 @@ fix_hall_light:
       data:
         entity_id: media_player.family_room_speaker
         message: I fixed it real good.
+
 sleep_imac:
   alias: Sleep iMac
   sequence:
-    service: mqtt.publish
+  - service: mqtt.publish
     data:
       topic:   host/impro
       payload: sleep
+  - service: switch.turn_off
+    entity_id: switch.audio_mixer
+
 notify_tts:
   sequence:
     - service: media_player.alexa_tts
