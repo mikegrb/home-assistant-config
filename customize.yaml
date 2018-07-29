@@ -131,6 +131,8 @@ fan.den:
   icon: mdi:fan
 fan.master_bedroom:
   icon: mdi:fan
+switch.lounge_fan:
+  icon: mdi:fan
 sensor.kitchen_zw100_relative_humidity:
   icon: mdi:water-percent
 switch.scanner:

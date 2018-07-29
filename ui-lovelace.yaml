@@ -5,67 +5,28 @@ name: Home
 views:
   - title: Home
     cards:
-    - type: entity-filter
-      entities:
-        - device_tracker.michaels_iphone
-        - device_tracker.heidi_grebs_iphone
-      state_filter:
-        -  'home'
-      card:
-        type: glance
-        title: People at home
-    - type: weather-forecast
-      title: Weather
-      entity: weather.yweather
-    - type: custom:monster-card
-      card:
-        type: entities
-        title: "On"
-      filter:
-        include:
-          - domain: light
-            state: 'on'
-          - domain: switch
-            state: 'on'
-        exclude:
-          - entity_id: "*undercounter*"
-          - entity_id: light.hue_lightstrip_plus_1
-          - entity_id: switch.outside_front
-          - entity_id: switch.outside_lights
-          - entity_id: switch.dryer_switch
-          - entity_id: switch.washer_switch
-          - entity_id: switch.scanner
-
-    - type: glance
-      title: Kitchen
-      entities:
-        - switch.on_air
-        - light.kitchen
-        - light.kitchen_table
-        - light.kitchen_accent
-        - sensor.fountain_water_level
-        - sensor.fountain_fill
-        - sensor.kitchen_zw100_temperature
-        - sensor.kitchen_zw100_relative_humidity
-        - sensor.kitchen_zw100_luminance
-        - binary_sensor.sensor
-
-  - tab_icon: mdi:floor-plan
-    title: Rooms
-    cards:
-      - type: entities
-        title: Kitchen
-        entities:
-          - switch.on_air
-          - light.kitchen
-          - light.kitchen_table
-          - light.kitchen_accent
-          - switch.fountain
-          - sensor.fountain_fill
-          - sensor.kitchen_zw100_temperature
-          - sensor.kitchen_zw100_relative_humidity
-          - sensor.kitchen_zw100_luminance
-          - binary_sensor.kitchen_zw100_sensor
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Kitchen
+          entities:
+            - switch.on_air
+            - light.kitchen
+            - light.kitchen_table
+            - light.kitchen_accent
+            - switch.fountain
+        - type: glance
+          title: Kitchen Sensors
+          entities:
+            - sensor.fountain_fill
+            - entity: sensor.kitchen_zw100_temperature
+              name: Temp
+            - entity: sensor.kitchen_zw100_relative_humidity
+              name: Humidity
+            - entity: sensor.kitchen_zw100_luminance
+              name: Light
+            - entity: binary_sensor.kitchen_zw100_sensor
+              name: Motion
       - type: entities
         title: Den
         entities:
@@ -119,6 +80,31 @@ views:
           - switch.outside_back
           - lock.front_door_lock
           - sensor.front_door_status
+      - type: weather-forecast
+        title: Weather
+        entity: weather.galloway
+      - type: iframe
+        url: https://embed.windy.com/embed2.html?overlay=radar
+        aspect_ratio: 75%
+
+      - type: custom:monster-card
+        card:
+          type: entities
+          title: Stuff On
+        filter:
+          include:
+            - domain: light
+              state: 'on'
+            - domain: switch
+              state: 'on'
+          exclude:
+            - entity_id: "*undercounter*"
+            - entity_id: light.hue_lightstrip_plus_1
+            - entity_id: switch.outside_front
+            - entity_id: switch.outside_lights
+            - entity_id: switch.dryer_switch
+            - entity_id: switch.washer_switch
+            - entity_id: switch.scanner
 
   - tab_icon: mdi:cctv
     title: Cameras

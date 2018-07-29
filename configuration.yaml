@@ -21,6 +21,7 @@ recorder:
       - weather
       - camera
       - sun
+      - automation
 
 conversation:
 history:
@@ -87,22 +88,17 @@ climate:
     password: !secret nest_password
 
 weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    name: Galloway
   - platform: yweather
+    name: Later
 
 sensor:
   - platform: ted5000
     name: main
     host: 192.168.86.50
     port: 80
-  - platform: darksky
-    api_key: !secret darksky_api_key
-    monitored_conditions:
-      - summary
-      - precip_probability
-      - temperature
-      - wind_speed
-      - cloud_cover
-      - humidity
   - platform: bitcoin
     display_options:
       - exchangerate
