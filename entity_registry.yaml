@@ -325,7 +325,7 @@ sensor.on_air_power:
   unique_id: 11-72057594227490946
 zwave.on_air:
   config_entry_id:
-  name:
+  name: On Air
   platform: zwave
   unique_id: node-11
 sensor.on_air_voltage:

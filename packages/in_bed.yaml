@@ -17,6 +17,9 @@ automation:
             message: Good Night
         - service: homeassistant.turn_off
           entity_id: group.all_inside
+        - service: switch.turn_off
+          entity_id: switch.audio_mixer
+        - service: script.sleep_imac
 
     - alias: Good Morning
       trigger:
