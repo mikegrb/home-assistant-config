@@ -147,6 +147,8 @@ switch.fountain:
   icon: mdi:spotlight
 switch.audio_mixer:
   icon: mdi:tune-vertical
+switch.hf_radio:
+  icon: mdi:radio-tower
 
 sensor.scanner_current:
   hidden: true

@@ -49,6 +49,7 @@ views:
         entities:
           - light.office
           - switch.office_tv
+          - switch.hf_radio
           - switch.scanner
           - switch.audio_mixer
           - entity: climate.home_house_thermostat

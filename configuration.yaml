@@ -228,6 +228,17 @@ switch:
     payload_available: "Online"
     payload_not_available: "Offline"
     retain: false
+  - platform: mqtt
+    name: "HF Radio"
+    state_topic: "stat/office/hf_radio/POWER"
+    command_topic: "cmnd/office/hf_radio/POWER"
+    availability_topic: "tele/office/hf_radio/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
 
 camera:
   - platform: generic

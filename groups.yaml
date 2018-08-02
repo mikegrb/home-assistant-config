@@ -25,6 +25,7 @@ kitchen:
     - switch.on_air
     - light.kitchen
     - light.kitchen_table
+    - light.kitchen_sink
     - light.kitchen_accent
     - switch.fountain
     - sensor.fountain_fill
@@ -52,6 +53,7 @@ Office:
   entities:
     - light.office
     - switch.office_tv
+    - switch.hf_radio
     - switch.scanner
     - switch.audio_mixer
 
