@@ -1,6 +1,8 @@
 resources:
   - url: /local/monster-card.js
     type: js
+  - url: /local/custom-lovelace/thermostat-card/thermostat-card.js
+    type: module
 name: Home
 views:
   - title: Home
@@ -9,10 +11,12 @@ views:
         cards:
         - type: entities
           title: Kitchen
+          show_header_toggle: false
           entities:
             - switch.on_air
             - light.kitchen
             - light.kitchen_table
+            - light.kitchen_sink
             - light.kitchen_accent
             - switch.fountain
         - type: glance
@@ -29,34 +33,42 @@ views:
               name: Motion
       - type: entities
         title: Den
+        show_header_toggle: false
         entities:
           - light.den
           - fan.den
           # - media_player.family_room_speaker
       - type: entities
         title: Front Room
+        show_header_toggle: false
         entities:
           - light.front_room
       - type: entities
         title: Office
+        show_header_toggle: false
         entities:
           - light.office
           - switch.office_tv
           - switch.scanner
           - switch.audio_mixer
+          - entity: climate.home_house_thermostat
+            name: Thermostat
       - type: entities
         title: Master Bedroom
+        show_header_toggle: false
         entities:
           - light.master_bedroom
           - fan.master_bedroom
           - input_boolean.in_bed
       - type: entities
         title: Lounge
+        show_header_toggle: false
         entities:
           - light.lounge
           - switch.lounge_fan
       - type: entities
         title: TJ's Room
+        show_header_toggle: false
         entities:
           - switch.tjs_desk_lamp
       - type: entities
@@ -66,6 +78,7 @@ views:
           - sensor.dryer
       - type: entities
         title: Halls
+        show_header_toggle: false
         entities:
           - light.downstairs_hall
           - light.upstairs_hall
@@ -76,21 +89,34 @@ views:
           - sensor.garage
       - type: entities
         title: Outside
+        show_header_toggle: false
         entities:
           - switch.outside_back
           - lock.front_door_lock
           - sensor.front_door_status
-      - type: weather-forecast
-        title: Weather
-        entity: weather.galloway
-      - type: iframe
-        url: https://embed.windy.com/embed2.html?overlay=radar
-        aspect_ratio: 75%
+      - type: vertical-stack
+        cards:
+        - type: weather-forecast
+          title: Weather
+          entity: weather.galloway
+        - type: iframe
+          url: https://embed.windy.com/embed2.html?overlay=radar
+          aspect_ratio: 75%
+      - type: entities
+        title: Energy
+        entities:
+          - sensor.main_mtu1_power
+          - sensor.juicenet_device_charging_status
+      - type: custom:thermostat-card
+        title: Thermostat
+        entity: climate.home_house_thermostat
+
 
       - type: custom:monster-card
         card:
           type: entities
           title: Stuff On
+          show_header_toggle: false
         filter:
           include:
             - domain: light
@@ -100,6 +126,7 @@ views:
           exclude:
             - entity_id: "*undercounter*"
             - entity_id: light.hue_lightstrip_plus_1
+            - entity_id: light.inside_lights
             - entity_id: switch.outside_front
             - entity_id: switch.outside_lights
             - entity_id: switch.dryer_switch
