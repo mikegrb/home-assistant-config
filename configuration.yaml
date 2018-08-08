@@ -58,7 +58,7 @@ hue:
 wink:
 
 zwave:
-  usb_path: /dev/ttyACM1
+  usb_path: /dev/ttyACM0
   network_key: !secret z_wave_net_key
 
 panel_iframe:

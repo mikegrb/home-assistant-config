@@ -1,4 +1,5 @@
 - alias: Generate Z-Wave graph
+  initial_state: 'off'
   trigger:
     platform: time
     minutes: '/5'
