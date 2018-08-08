@@ -1,0 +1,32 @@
+input_boolean:
+  medicine:
+    name: Took Medicine
+    initial: off
+    icon: mdi:pill
+
+automation:
+    - alias: Reset Medicine
+      trigger:
+      - platform: time
+        at: '00:00:00'
+      action:
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.medicine
+
+    - alias: Med Reminder
+      trigger:
+      - platform: time
+        minutes: '/20'
+        seconds: 00
+      condition:
+        condition: and
+        conditions:
+        - condition: state
+          entity_id: input_boolean.medicine
+          state: 'off'
+        - condition: time
+          after: '08:30:00'
+      action:
+      - service: script.notify_tts
+        data:
+          message: Take your medicine

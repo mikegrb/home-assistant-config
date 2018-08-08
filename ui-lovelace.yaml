@@ -52,6 +52,7 @@ views:
           - switch.hf_radio
           - switch.scanner
           - switch.audio_mixer
+          - input_boolean.medicine
           - entity: climate.home_house_thermostat
             name: Thermostat
       - type: entities

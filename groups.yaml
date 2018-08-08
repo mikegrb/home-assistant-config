@@ -56,6 +56,7 @@ Office:
     - switch.hf_radio
     - switch.scanner
     - switch.audio_mixer
+    - input_boolean.medicine
 
 Master Bedroom:
   entities:
