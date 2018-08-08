@@ -17,6 +17,9 @@ fix_hall_light:
 sleep_imac:
   alias: Sleep iMac
   sequence:
+  - service: switch.turn_off
+    entity_id: switch.hf_radio
+  - delay: '00:00:02'
   - service: mqtt.publish
     data:
       topic:   host/impro

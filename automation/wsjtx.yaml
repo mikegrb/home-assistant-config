@@ -1,0 +1,22 @@
+- alias: 'Close WSJTX when turning off radio'
+  trigger:
+    - platform: state
+      entity_id: switch.hf_radio
+      to: 'off'
+  action:
+    - service: mqtt.publish
+      data:
+        topic:   host/impro
+        payload: wsjtx exit
+
+- alias: 'Open WSJTX when turning on radio'
+  trigger:
+    - platform: state
+      entity_id: switch.hf_radio
+      to: 'on'
+  action:
+    - delay: 00:00:08
+    - service: mqtt.publish
+      data:
+        topic:   host/impro
+        payload: wsjtx open
