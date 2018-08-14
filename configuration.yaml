@@ -137,6 +137,16 @@ sensor:
           {% set lock_status = lock_status|replace('user 0', 'Master') %}
           {% set lock_status = lock_status|replace('user 1', 'Kids') %}
           {{ lock_status }}
+      electric_usage:
+        friendly_name: Electricity Usage
+        entity_id: sensor.solar_generation
+        unit_of_measurement: kWh
+        value_template: '{{ states.sensor.solar_generation.attributes["tot_used"] }}'
+      electric_net:
+        friendly_name: Net Electricity
+        entity_id: sensor.solar_generation
+        unit_of_measurement: kWh
+        value_template: '{{ ( states.sensor.solar_generation.attributes["tot_used"] -  float(states.sensor.solar_generation.state) ) | round(3) }}'
 
   - platform: ups
     username: mikegrb
@@ -157,6 +167,15 @@ sensor:
       - ping
       - download
       - upload
+
+  - platform: rest
+    resource: https://solar.thegrebs.com/latest.json
+    name: Solar Generation
+    value_template: '{{ value_json.tot_solar }}'
+    unit_of_measurement: kWh
+    json_attributes:
+      - tot_used
+
 
 apple_tv:
   # Living Room

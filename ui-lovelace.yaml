@@ -104,11 +104,21 @@ views:
         - type: iframe
           url: https://embed.windy.com/embed2.html?overlay=radar
           aspect_ratio: 75%
+
       - type: entities
         title: Energy
         entities:
-          - sensor.main_mtu1_power
-          - sensor.juicenet_device_charging_status
+          - entity: sensor.main_mtu1_power
+            name: Current Usage
+          - entity: sensor.electric_usage
+            name: Today's Usage
+          - entity: sensor.solar_generation
+            name: Today's Generation
+          - entity: sensor.electric_net
+            name: Today's Net
+          - entity: sensor.juicenet_device_charging_status
+            name: Car EVSE Status
+
       - type: custom:thermostat-card
         title: Thermostat
         entity: climate.home_house_thermostat

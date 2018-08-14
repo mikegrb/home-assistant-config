@@ -168,11 +168,13 @@ juicenet:
     - sensor.juicenet_device_temperature
     - sensor.juicenet_device_voltage
     - sensor.juicenet_device_watts
-ted:
+energy:
   name: Energy
   entities:
     - sensor.main_mtu1_power
-    - sensor.main_mtu1_voltage
+    - sensor.electric_usage
+    - sensor.solar_generation
+    - sensor.electric_net
 
 Climate:
   entities:
