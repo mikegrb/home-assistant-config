@@ -74,6 +74,11 @@ panel_iframe:
     title: 'Z-Wave Graph'
     icon: mdi:vector-square
     url: https://home.thegrebs.com/local/z-wave-graph.html
+panel_custom:
+  - name: zwavegraph2
+    sidebar_title: ZWave Graph2
+    sidebar_icon: mdi:access-point-network
+    url_path: zwave
 
 shell_command:
   z_wave_graph: /usr/local/bin/python3 /config/bin/z-wave-graph.py

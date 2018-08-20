@@ -1,0 +1,209 @@
+<dom-module id='ha-panel-zwavegraph2'>
+  <template>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css"/>
+
+    <style type="text/css">
+        #mynetwork {
+            border: 1px solid lightgray;
+            height: 90%;
+        }
+        #mygraph { height:90% }
+    </style>
+
+    <div id="mynetwork">
+      <div id="configuration"></div>
+      <div id="mygraph"></div>
+    </div>
+
+  </template>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+
+</dom-module>
+
+<script>
+class HaPanelZWave extends Polymer.Element {
+  static get is() { return 'ha-panel-zwavegraph2'; }
+
+  static get properties() {
+    return {
+      // Home Assistant object
+      hass: Object,
+      // If should render in narrow mode
+      narrow: {
+        type: Boolean,
+        value: false,
+      },
+      // If sidebar is currently shown
+      showMenu: {
+        type: Boolean,
+        value: false,
+      },
+      // Home Assistant panel info
+      // panel.config contains config passed to register_panel serverside
+      panel: Object,
+    };
+  }
+
+
+  ready() {
+    super.ready();
+    let data = this.listNodes(this.hass);
+
+    data.nodes.splice(0,0,
+	{id: "legendBox",
+         label: "Battery\nPowered\nDevice",
+         x:50, y:50, physics: false, shape: "box", fixed: true, group: "legend"
+        },{id: "legendCircle",
+         label: "Mains\nPowered\nDevice",
+         x:150, y:150, physics: false, shape: "circle", fixed:true, group: "legend"
+        });
+
+
+    var options = {
+      height: '100%',
+      configure: {
+        enabled: true,
+        filter: function (option, path) {
+          if (option === "nodeDistance") {
+            return true;
+          }
+          return false;
+        },
+        container: this.$.configuration,
+        showButton: false
+      },
+      layout: {
+        hierarchical: {
+          enabled: true,
+          direction: "DU",
+          nodeSpacing: 25,
+          sortMethod: "directed"
+        }
+      },
+      interaction: {dragNodes: true, hover: true},
+      physics: {
+        hierarchicalRepulsion: {
+          centralGravity: 0.25,
+          springLength: 100,
+          springConstant: 0.01,
+          nodeDistance: 100
+        },
+        minVelocity: 0.75,
+        solver: "hierarchicalRepulsion"
+      },
+      nodes: {
+        borderWidth: 1,
+        scaling: {
+          label: false
+        }
+      }
+    };
+    // create a network
+    var container = this.$.mygraph;
+    // initialize your network!
+    var network = new vis.Network(container, data, options);
+
+  }
+
+
+  listNodes(hass) {
+    let states=new Array();
+    for (let state in hass.states)
+    {
+      states.push({name:state, entity:hass.states[state]});
+    }
+    let zwaves = states.filter((s) => {return s.name.indexOf("zwave.") ==0});
+    let result= {"edges":[], "nodes":[]};
+
+    let hubNode=0;
+    let neighbours={};
+
+    for (let b in zwaves)
+    {
+       let id=zwaves[b].entity.attributes["node_id"];
+       let node = zwaves[b].entity;
+       if (node.attributes["capabilities"].filter(
+			(s) => {return s =="primaryController"}).length > 0)
+       {
+         hubNode=id;
+       }
+       neighbours[id]=node.attributes['neighbors'];
+
+       let entities = states.filter((s) => {
+                    return ((s.name.indexOf("zwave.") == -1) &&
+                            (s.entity.attributes["node_id"] == id)) });
+       let batlev=node.attributes.battery_level;
+       let entity={"id":  id,
+                   "label": (node.attributes["node_name"] + " (" + node.attributes["averageResponseRTT"]+"ms)").replace(/ /g, "\n"),
+                   "group": "unset",
+                   "shape": batlev != undefined ? "box" : "circle",
+                   "title": "<b>"+node.attributes["node_name"]+"</b>" +
+                            "<br />Node: " + id + (node.attributes["is_zwave_plus"] ? "+" : "") +
+                            "<br />Product Name: " + node.attributes["product_name"] +
+                            "<br />Average Request RTT: " + node.attributes["averageResponseRTT"]+"ms" +
+                            "<br />Power source: " + (batlev != "undefined" ? "battery (" + batlev +"%)" : "mains") +
+                            "<br />" + entities.length + " entities",
+                   "forwards": (node.attributes.is_awake && node.attributes.is_ready && !node.attributes.is_failed &&
+                                node.attributes.capabilities.includes("listening"))
+                  };
+
+       if (node.attributes["is_failed"])
+       {
+         entity["title"]="<b>FAILED: </b>"+entity.title;
+         entity["group"]="Failed";
+       }
+
+       if (hubNode == id)
+       {
+         entity.label="ZWave Hub";
+         entity.borderWidth= 2;
+         entity.fixed=true;
+       }
+
+       result.nodes.push(entity);
+    }
+
+
+    if (hubNode > 0)
+    {
+      let layer=0;
+      let previousRow=[hubNode];
+      let mappedNodes=[hubNode];
+      while (previousRow.length > 0)
+      {
+        layer = layer+1;
+        let nextRow=[];
+        for (let target in previousRow)
+        {
+          result.nodes.filter((n) => {return ((n.id ==previousRow[target]) && (n.group="unset"))})
+                      .every((d) => {d.group="Layer " + layer;})
+
+          if (result.nodes.filter((n) => {return ((n.id == previousRow[target]) && (n.forwards))}).length > 0)
+          {
+            let row=neighbours[previousRow[target]];
+            for (let node in row)
+            {
+
+              if (!mappedNodes.includes(row[node]))
+              {
+                result.edges.push({"from":row[node], "to":previousRow[target]});
+                nextRow.push(row[node]);
+              }
+            }
+          }
+        }
+
+        for (let idx in nextRow)
+        {
+          mappedNodes.push(nextRow[idx]);
+        }
+        previousRow = nextRow;
+      }
+    }
+    return result;
+   }
+
+
+}
+customElements.define(HaPanelZWave.is, HaPanelZWave);
+</script>
