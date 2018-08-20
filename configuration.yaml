@@ -152,7 +152,10 @@ sensor:
         entity_id: sensor.solar_generation
         unit_of_measurement: kWh
         value_template: '{{ ( states.sensor.solar_generation.attributes["tot_used"] -  float(states.sensor.solar_generation.state) ) | round(3) }}'
-
+      living_room_media:
+        friendly_name: Living Room Media
+        entity_id: remote.living_room
+        value_template: '{{ states.remote.living_room.attributes.current_activity }}'
   - platform: ups
     username: mikegrb
     password: !secret ups_password

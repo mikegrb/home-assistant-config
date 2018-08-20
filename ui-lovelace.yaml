@@ -37,6 +37,7 @@ views:
         entities:
           - light.den
           - fan.den
+          - sensor.living_room_media
           # - media_player.family_room_speaker
       - type: entities
         title: Front Room
@@ -99,8 +100,11 @@ views:
       - type: vertical-stack
         cards:
         - type: weather-forecast
-          title: Weather
+          title: Soon
           entity: weather.galloway
+        - type: weather-forecast
+          title: Later
+          entity: weather.later
         - type: iframe
           url: https://embed.windy.com/embed2.html?overlay=radar
           aspect_ratio: 75%

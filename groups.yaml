@@ -41,6 +41,7 @@ den:
     - light.den
     - fan.den
     - media_player.family_room_speaker
+    - sensor.living_room_media
 
 front_room:
   name: Front Room
