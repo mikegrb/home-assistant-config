@@ -46,8 +46,7 @@ automation:
         entity_id: sensor.washer
         to: 'Idle'
         from: 'Running'
-        for:
-          seconds: 15
+        for: '0:00:15'
     action:
       - service: script.notify_tts_all_t
         data:

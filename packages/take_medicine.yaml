@@ -15,7 +15,7 @@ automation:
 
     - alias: Med Reminder
       trigger:
-      - platform: time
+      - platform: time_pattern
         minutes: '/20'
         seconds: 00
       condition:

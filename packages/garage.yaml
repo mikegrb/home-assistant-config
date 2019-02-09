@@ -35,13 +35,12 @@ sensor:
           {% endif %}
 
 automation:
-    - alias: Garage Door 1 hr
+    - alias: Garage Door 30 min
       trigger:
         platform: state
         entity_id: binary_sensor.garage_door_sensor
         to: 'on'
-        for:
-          hours: 1
+        for: '00:30:00'
       action:
         - service: notify.all
           data:
