@@ -1,15 +1,12 @@
 - alias: TJ Bedtime
   trigger:
     platform: time
-    at: '21:00:00'
+    at: '19:30:00'
   condition:
     - condition: time
       weekday:
         - sun
         - mon
-        - tue
-        - wed
-        - thu
   action:
     - service: tts.google_say
       data:
@@ -21,16 +18,12 @@
 - alias: TJ in Bed
   trigger:
     platform: time
-    at: '21:10:00'
+    at: '20:00:00'
   condition:
     - condition: time
       weekday:
         - sun
         - mon
-        - tue
-        - wed
-        - thu
   action:
     - service: switch.turn_off
       entity_id: switch.on_air
-
