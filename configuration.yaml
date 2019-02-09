@@ -68,13 +68,9 @@ panel_iframe:
     title: Grafana
     url: https://home.thegrebs.com/grafana/dashboard/db/main
     icon: mdi:speedometer
-  z_wave_graph:
-    title: 'Z-Wave Graph'
-    icon: mdi:vector-square
-    url: https://home.thegrebs.com/local/z-wave-graph.html
 panel_custom:
-  - name: zwavegraph2
-    sidebar_title: ZWave Graph2
+  - name: zwavegraph
+    sidebar_title: ZWave Graph
     sidebar_icon: mdi:access-point-network
     url_path: zwave
 
