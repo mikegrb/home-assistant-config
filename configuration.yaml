@@ -1,5 +1,5 @@
 homeassistant:
-  name: Home
+  name: My Home
   latitude:  39.473055912019305
   longitude: -74.50922252018545
   elevation: 15
@@ -28,6 +28,7 @@ ffmpeg:
 map:
 sun:
 ios:
+system_health:
 influxdb:
   host: 192.168.86.105
 
@@ -36,6 +37,8 @@ http:
   #  ssl_certificate: /ssl/fullchain.pem
   # ssl_key:         /ssl/privkey.pem
   base_url:        https://home.thegrebs.com:443
+  use_x_forwarded_for: True
+  trusted_proxies: 172.30.33.3
 
 mqtt:
   broker: core-mosquitto
