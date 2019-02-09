@@ -186,9 +186,9 @@ apple_tv:
     login_id: !secret apple_tv_login_id
     start_off: true
 
-octoprint:
-  host:    192.168.86.120
-  api_key: !secret octoprint_api_key
+# octoprint:
+#   host:    192.168.86.120
+#   api_key: !secret octoprint_api_key
 
 #media_player:
 #  - platform: tivo
@@ -262,10 +262,10 @@ camera:
   - platform: generic
     name: RADAR
     still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=DIX&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=1&rainsnow=1&lightning=1&smooth=1&rand=25425955&lat=39.47&lon=-74.51&label=Pomona
-  - platform: mjpeg
-    name: OctoPrint
-    still_image_url: http://192.168.86.120/webcam/?action=snapshot
-    mjpeg_url: http://192.168.86.120/webcam/?action=stream
+  # - platform: mjpeg
+  #   name: OctoPrint
+  #   still_image_url: http://192.168.86.120/webcam/?action=snapshot
+  #   mjpeg_url: http://192.168.86.120/webcam/?action=stream
   - platform: uvc
     nvr: 192.168.86.126
     key: !secret uvc_api_key
