@@ -17,6 +17,7 @@ sensor:
 
 automation:
   - alias: 'Fountain Water Level Evening'
+    initial_state: on
     trigger:
       platform: time
       at: '18:29:00'
@@ -30,6 +31,7 @@ automation:
           message: The fountain is low on water.
 
   - alias: 'Fountain Water Level'
+    initial_state: on
     trigger:
       platform: numeric_state
       entity_id: sensor.fountain_water_level

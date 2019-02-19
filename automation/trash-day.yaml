@@ -1,6 +1,7 @@
 # Wednesday evening reminder for trash day
 
 - alias: Trash Day Reminder
+  initial_state: on
   trigger:
     platform: time
     at: '18:31:00'

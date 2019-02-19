@@ -30,6 +30,7 @@ sensor:
 
 automation:
   - alias: Dryer Done
+    initial_state: on
     trigger:
       - platform: state
         entity_id: sensor.dryer
@@ -41,6 +42,7 @@ automation:
           message: The dryer is done.
 
   - alias: Washer Done
+    initial_state: on
     trigger:
       - platform: state
         entity_id: sensor.washer

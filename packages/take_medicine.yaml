@@ -6,6 +6,7 @@ input_boolean:
 
 automation:
     - alias: Reset Medicine
+      initial_state: on
       trigger:
       - platform: time
         at: '00:00:00'
@@ -14,6 +15,7 @@ automation:
         entity_id: input_boolean.medicine
 
     - alias: Med Reminder
+      initial_state: on
       trigger:
       - platform: time_pattern
         minutes: '/20'

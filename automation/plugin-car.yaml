@@ -1,6 +1,7 @@
 # Evening reminder to plug in the car if we are both home
 
 - alias: Plug-In Car Reminder
+  initial_state: on
   trigger:
     platform: time
     at: '18:30:00'

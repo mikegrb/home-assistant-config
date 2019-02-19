@@ -1,4 +1,5 @@
 - alias: TJ Bedtime
+  initial_state: on
   trigger:
     platform: time
     at: '19:30:00'
@@ -16,6 +17,7 @@
       entity_id: switch.on_air
 
 - alias: TJ in Bed
+  initial_state: on
   trigger:
     platform: time
     at: '20:00:00'

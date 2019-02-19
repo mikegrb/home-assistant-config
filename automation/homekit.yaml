@@ -1,5 +1,6 @@
 # give HA 3 minutes to discover devices
 - alias: 'Start HomeKit'
+  initial_state: on
   trigger:
     - platform: homeassistant
       event: start

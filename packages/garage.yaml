@@ -36,6 +36,7 @@ sensor:
 
 automation:
     - alias: Garage Door 30 min
+      initial_state: on
       trigger:
         platform: state
         entity_id: binary_sensor.garage_door_sensor
