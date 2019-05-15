@@ -201,11 +201,11 @@ apple_tv:
 #    device: 0
 #    debug: 0
 
-media_player:
-  - platform: alexa
-    email: michael@thegrebs.com
-    password: !secret amazon_pass
-    url: amazon.com
+# media_player:
+#   - platform: alexa
+#     email: michael@thegrebs.com
+#     password: !secret amazon_pass
+#     url: amazon.com
 
 switch:
   - platform: command_line
