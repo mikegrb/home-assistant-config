@@ -275,7 +275,8 @@ camera:
     password: !secret uvc_pass
 
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 notify:
   - name: twitter
