@@ -58,6 +58,9 @@ hue:
 
 wink:
 
+ecobee:
+  api_key: !secret ecobee_api_key
+
 zwave:
   usb_path: /dev/ttyACM0
   network_key: !secret z_wave_net_key
@@ -84,17 +87,10 @@ nest:
   client_id:     !secret nest_client_id
   client_secret: !secret nest_client_secret
 
-climate:
-  - platform: nest
-    username: michael@thegrebs.com
-    password: !secret nest_password
-
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
     name: Galloway
-  - platform: yweather
-    name: Later
 
 sensor:
   - platform: ted5000
@@ -285,14 +281,18 @@ notify:
     consumer_secret: !secret twitter_consumer_secret
     access_token: !secret twitter_access_token
     access_token_secret: !secret twitter_access_token_secret
+  - name: ecobee
+    platform: ecobee
   - name: all
     platform: group
     services:
       - service: ios_michaels_iphone
+      - service: ecobee
   - name: all_t
     platform: group
     services:
       - service: ios_michaels_iphone
+      - service: ecobee
       - service: twitter
 
 juicenet:
