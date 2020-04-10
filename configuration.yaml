@@ -7,6 +7,10 @@ homeassistant:
   time_zone: America/New_York
   customize: !include customize.yaml
   packages: !include_dir_named packages
+  auth_providers:
+    - type: homeassistant
+    - type: legacy_api_password
+      api_password: !secret http_password
 
 frontend:
  themes: !include_dir_merge_named themes
@@ -29,21 +33,13 @@ map:
 sun:
 ios:
 system_health:
-influxdb:
-  host: 192.168.86.105
 
 http:
-  api_password:    !secret http_password
   #  ssl_certificate: /ssl/fullchain.pem
   # ssl_key:         /ssl/privkey.pem
   base_url:        https://home.thegrebs.com:443
   use_x_forwarded_for: True
   trusted_proxies: 172.30.33.3
-
-mqtt:
-  broker: core-mosquitto
-  username: mqtt
-  password: !secret mqtt_pass
 
 updater:
   include_used_components: true
@@ -51,6 +47,7 @@ updater:
 discovery:
   ignore:
     - sabnzbd
+    - plex_mediaserver
 
 hue:
   bridges:
@@ -157,14 +154,14 @@ sensor:
     monitored_conditions:
       - Current State
       - Job Percentage
-  - platform: speedtest
-    minute: 30
-    hour:
-      - 6
-    monitored_conditions:
-      - ping
-      - download
-      - upload
+  # - platform: speedtest
+  #   minute: 30
+  #   hour:
+  #     - 6
+  #   monitored_conditions:
+  #     - ping
+  #     - download
+  #     - upload
 
   - platform: rest
     resource: https://solar.thegrebs.com/latest.json

@@ -63,6 +63,7 @@ Master Bedroom:
   entities:
     - light.master_bedroom
     - fan.master_bedroom
+    - light.master_bath_chandalier
     - input_boolean.in_bed
 
 Lounge:
