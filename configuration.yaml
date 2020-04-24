@@ -47,7 +47,6 @@ updater:
 discovery:
   ignore:
     - sabnzbd
-    - plex_mediaserver
 
 hue:
   bridges:
@@ -146,9 +145,6 @@ sensor:
         friendly_name: Living Room Media
         entity_id: remote.living_room
         value_template: '{{ states.remote.living_room.attributes.current_activity }}'
-  - platform: ups
-    username: mikegrb
-    password: !secret ups_password
   - platform: octoprint
     name: OctoPrint
     monitored_conditions:

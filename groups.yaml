@@ -7,7 +7,6 @@
 rooms:
   name: Rooms
   icon: mdi:floor-plan
-  view: yes
   entities:
     - group.kitchen
     - group.den
@@ -121,7 +120,6 @@ All Inside:
 
 Weather:
   icon: mdi:weather-cloudy
-  view: yes
   entities:
     - group.weather_2
 
@@ -144,7 +142,6 @@ weather_2:
 
 Cameras:
   icon: mdi:cctv
-  view: yes
   entities:
     - camera.driveway
     - camera.front_door
